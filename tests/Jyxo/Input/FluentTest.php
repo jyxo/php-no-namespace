@@ -234,8 +234,8 @@ class Jyxo_Input_FluentTest extends PHPUnit_Framework_TestCase
 				->validate('isInt');
 		$this->assertTrue($input->isValid());
 
-		// But it's not a day...
-		$input->validate('isDay');
+		// But it's not a ZIP code...
+		$input->validate('isZipCode');
 		$this->assertFalse($input->isValid());
 	}
 
