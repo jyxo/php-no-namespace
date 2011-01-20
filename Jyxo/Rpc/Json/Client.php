@@ -38,14 +38,16 @@ class Jyxo_Rpc_Json_Client extends Jyxo_Rpc_Client
 		// Start profiling
 		$this->profileStart();
 
+		// Generates ID
+		$id = md5(uniqid(rand(), true));
+
 		try {
 			// Prepare JSON-RPC request
 			$data = json_encode(
 				array(
-					'request' => array(
-						'method' => $method,
-						'params' => $params
-					)
+					'method' => $method,
+					'params' => $params,
+					'id' => $id
 				)
 			);
 
@@ -66,12 +68,20 @@ class Jyxo_Rpc_Json_Client extends Jyxo_Rpc_Client
 		$this->profileEnd('JSON', $method, $params, $response);
 
 		// Error in response
-		if (!is_array($response) || !isset($response['response'])) {
-			throw new Jyxo_Rpc_Json_Exception('Nebyl navrácen požadovaný formát dat.');
+		if (!is_array($response) || !isset($response['id'])) {
+			throw new Jyxo_Rpc_Json_Exception('Invalid response data.');
 		}
-		$response = $response['response'];
-		if ((is_array($response)) && (isset($response['fault']))) {
-			throw new Jyxo_Rpc_Json_Exception(preg_replace('~\s+~', ' ', $response['fault']['faultString']));
+
+		if ($response['id'] != $id) {
+			throw new Jyxo_Rpc_Json_Exception('Response ID does not correspond to request ID.');
+		}
+
+		if (isset($response['error'])) {
+			throw new Jyxo_Rpc_Json_Exception(preg_replace('~\s+~', ' ', $response['error']['message']), $response['error']['code']);
+		}
+
+		if (!isset($response['result'])) {
+			throw new Jyxo_Rpc_Json_Exception('No response data.');
 		}
 
 		return $response;

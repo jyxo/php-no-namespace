@@ -133,6 +133,15 @@ abstract class Jyxo_Rpc_ServerTestCase extends PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * Tests bad request (parse error)
+	 */
+	public function testParseError()
+	{
+		$this->checkServerOutput('parse-error');
+	}
+
+
+	/**
 	 * Tests calling a function registered as a method.
 	 */
 	public function testProcessFunction()
