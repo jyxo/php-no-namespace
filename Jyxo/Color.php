@@ -309,7 +309,7 @@ class Jyxo_Color
 	/**
 	 * Returns the color luminance as a decimal integer.
 	 *
-	 * @param integer|string mixed $value Luminance value
+	 * @param integer|string $value Luminance value
 	 * @return integer
 	 */
 	private function toInt($value)

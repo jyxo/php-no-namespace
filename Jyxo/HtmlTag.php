@@ -19,7 +19,7 @@
  * <code>
  * $p = Jyxo_HtmlTag::create('p')->setClass('buttons');
  * </code>
- * The magix __call() method ensures attributes settings.
+ * The magic __call() method ensures attributes settings.
  *
  * <code>
  * $p->render();

@@ -168,7 +168,7 @@ class Jyxo_Spl_MapIterator implements Countable, Jyxo_Spl_ArrayCopy, OuterIterat
 			} catch (OutOfBoundsException $e) {
 				// Skipped on purpose, I don't think it's necessary
 				// If you'd like to have this exception throw, remove this try-catch and add to 'else' block
-				// If (!$this->valid()) { throw new OutOfBoundException('Invalid seek position'); };
+				// If (!$this->valid()) { throw new OutOfBoundsException('Invalid seek position'); };
 			}
 		} else {
 			$this->rewind();
