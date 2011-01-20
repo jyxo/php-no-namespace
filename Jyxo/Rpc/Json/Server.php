@@ -56,7 +56,7 @@ class Jyxo_Rpc_Json_Server extends Jyxo_Rpc_Server
 	 */
 	public function process()
 	{
-		$data = array('id' => '');
+		$requestId = '';
 		try {
 			$data = file_get_contents('php://input');
 			$data = trim($data);
@@ -69,6 +69,8 @@ class Jyxo_Rpc_Json_Server extends Jyxo_Rpc_Server
 			if ($data === null && ($faultCode = json_last_error()) != JSON_ERROR_NONE) {
 				throw new Jyxo_Rpc_Json_Exception(self::$jsonErrors[$faultCode], $faultCode);
 			}
+
+			$requestId = isset($data['id']) ? $data['id'] : '';
 
 			// Parsing request data error
 			if (empty($data['method']) || !isset($data['id'])) {
@@ -91,7 +93,7 @@ class Jyxo_Rpc_Json_Server extends Jyxo_Rpc_Server
 					'message' => $e->getMessage(),
 					'code' => $e->getCode()
 				),
-				'id' => $data['id']
+				'id' => $requestId
 			);
 		}
 
