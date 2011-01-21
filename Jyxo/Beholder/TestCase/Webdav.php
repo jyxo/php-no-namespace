@@ -116,9 +116,6 @@ class Jyxo_Beholder_TestCase_Webdav extends Jyxo_Beholder_TestCase
 			if (!$webdav->unlink($path)) {
 				return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, sprintf('Delete error %s', $description));
 			}
-			if ($this->hardlink && !$webdav->unlink($hardlinkPath)) {
-				return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, sprintf('Delete error %s', $description));
-			}
 
 		} catch (Jyxo_Webdav_FileNotExistException $e) {
 			return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, sprintf('Read error %s', $description));
