@@ -63,11 +63,6 @@ class Jyxo_Beholder_TestCase_Memcached extends Jyxo_Beholder_TestCase
 			return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::NOT_APPLICABLE, 'Extension memcache missing');
 		}
 
-		// If we want to check the directory support, it has to be enabled
-		if (($this->dirSupport) && (!ini_get('memcache.dir_support'))) {
-			return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, 'Dir support disabled');
-		}
-
 		$random = md5(uniqid(time(), true));
 		$key = 'beholder-' . $random;
 		$value = $random;
