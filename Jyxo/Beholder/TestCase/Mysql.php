@@ -119,8 +119,7 @@ class Jyxo_Beholder_TestCase_Mysql extends Jyxo_Beholder_TestCase
 		if (false === mysqli_options($db, MYSQLI_OPT_CONNECT_TIMEOUT, $this->timeout)) {
 			return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, sprintf('Connection error %s', $description));
 		}
-		$db = mysqli_real_connect($db, $this->host, $this->user, $this->password, $this->database, $this->port);
-		if (false === $db) {
+		if (false === mysqli_real_connect($db, $this->host, $this->user, $this->password, $this->database, $this->port)) {
 			return new Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, sprintf('Connection error %s', $description));
 		}
 
