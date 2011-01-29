@@ -72,7 +72,7 @@ class Jyxo_Rpc_Json_Client extends Jyxo_Rpc_Client
 			throw new Jyxo_Rpc_Json_Exception('Invalid response data.');
 		}
 
-		if ($response['id'] != $id) {
+		if ($id !== $response['id']) {
 			throw new Jyxo_Rpc_Json_Exception('Response ID does not correspond to request ID.');
 		}
 
@@ -84,6 +84,6 @@ class Jyxo_Rpc_Json_Client extends Jyxo_Rpc_Client
 			throw new Jyxo_Rpc_Json_Exception('No response data.');
 		}
 
-		return $response;
+		return $response['result'];
 	}
 }
