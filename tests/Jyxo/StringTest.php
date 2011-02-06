@@ -137,23 +137,6 @@ class Jyxo_StringTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * Tests conversion functions.
-	 */
-	public function testConvert()
-	{
-		$this->assertEquals('abc', Jyxo_String::utf2iso('abc'));
-		$this->assertNotEquals('žluťoučký kůň příšerně úpěl ďábelské ódy', Jyxo_String::utf2iso('žluťoučký kůň příšerně úpěl ďábelské ódy'));
-		$this->assertRegExp('~^[a-z0-9]([a-z0-9\-]*[a-z0-9])?$~', Jyxo_String::utf2ident('žluťoučký kůň příšerně úpěl ďábelské ódy'));
-		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_String::utf2ascii('žluťoučký kůň příšerně úpěl ďábelské ódy'));
-		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_String::win2ascii(file_get_contents(DIR_FILES . '/string/cp1250.txt')));
-		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_String::iso2ascii(file_get_contents(DIR_FILES . '/string/iso-8859-2.txt')));
-		$this->assertEquals(file_get_contents(DIR_FILES . '/string/iso-8859-2.txt'), Jyxo_String::utf2iso('žluťoučký kůň příšerně úpěl ďábelské ódy'));
-		$this->assertEquals('zlutoucky-kun-priserne-upel-dabelske-ody', Jyxo_String::utf2ident('?žluťoučký  +  kůň příšerně úpěl ďábelské ódy...'));
-		$this->assertEquals('Rossija', Jyxo_String::russian2ascii('Россия'));
-		$this->assertEquals('Gosudarstvennyj gimn Rossijskoj Federacii', Jyxo_String::russian2ascii('Государственный гимн Российской Федерации'));
-	}
-
-	/**
 	 * Test the crc generator.
 	 */
 	public function testCrc()
@@ -172,30 +155,6 @@ class Jyxo_StringTest extends PHPUnit_Framework_TestCase
 			$this->assertEquals($i, strlen($random));
 			$this->assertRegExp('~^[a-z0-9]+$~i', $random);
 		}
-	}
-
-	/**
-	 * Tests UTF-8 checking.
-	 */
-	public function testCheckUtf()
-	{
-		$this->assertTrue(Jyxo_String::checkUtf('žluťoučký kůň pěl ďábelské ódy'));
-		$this->assertTrue(Jyxo_String::checkUtf('Государственный гимн Российской Федерации'));
-		$this->assertFalse(Jyxo_String::checkUtf(file_get_contents(DIR_FILES . '/string/cp1250.txt')));
-		$this->assertFalse(Jyxo_String::checkUtf(file_get_contents(DIR_FILES . '/string/iso-8859-2.txt')));
-	}
-
-	/**
-	 * Tests UTF-8 fixing.
-	 */
-	public function testFixUtf()
-	{
-		$this->assertEquals('žluťoučký kůň pěl ďábelské ódy', Jyxo_String::fixUtf('žluťoučký kůň pěl ďábelské ódy'));
-		$this->assertEquals('Государственный гимн Российской Федерации', Jyxo_String::fixUtf('Государственный гимн Российской Федерации'));
-
-		$expected = 'glibc' === ICONV_IMPL ? '' : 'luouk k pern pl belsk ';
-		$this->assertEquals($expected, Jyxo_String::fixUtf(file_get_contents(DIR_FILES . '/string/cp1250.txt')));
-		$this->assertEquals($expected, Jyxo_String::fixUtf(file_get_contents(DIR_FILES . '/string/iso-8859-2.txt')));
 	}
 
 	/**
