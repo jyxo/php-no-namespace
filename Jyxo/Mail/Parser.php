@@ -1142,7 +1142,7 @@ class Jyxo_Mail_Parser
 		}
 
 		// Detection sometimes fails or the message may be in wrong format, so we remove invalid UTF-8 letters
-		$string = Jyxo_String::fixUtf($string);
+		$string = @iconv($charset, 'UTF-8//TRANSLIT//IGNORE', $string);
 
 		return $string;
 	}
