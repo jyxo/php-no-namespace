@@ -167,7 +167,7 @@ class Jyxo_FirePhp
 				'Label' => null
 			),
 			array(
-				'Message' => Jyxo_String::fixUtf($message),
+				'Message' => Jyxo_Charset::fixUtf($message),
 				'File' => $file,
 				'Line' => $line,
 				'Trace' => self::encodeVariable($trace)
