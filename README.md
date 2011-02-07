@@ -44,6 +44,6 @@ Jan Tichý, Jakub Tománek, Ladislav Vacek, Martin Voldřich
 
 ### Individual contributors
 
-* [Matěj Humpál](https://github.com/finwe) - contributor ([\Jyxo\Gettext](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Gettext))
-* [Jan Pěček](https://github.com/honzap) - contributor ([\Jyxo\Rpc](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Rpc), [\Jyxo\Beholder](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Beholder))
-* [Jakub Tománek](https://github.com/thezero) - contributor ([\Jyxo\Spl](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Spl))
+* [Matěj Humpál](https://github.com/finwe) - contributor ([Jyxo_Gettext](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Gettext))
+* [Jan Pěček](https://github.com/honzap) - contributor ([Jyxo_Rpc](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Rpc), [Jyxo_Beholder](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Beholder))
+* [Jakub Tománek](https://github.com/thezero) - contributor ([Jyxo_Spl](https://github.com/jyxo/php-no-namespace/tree/master/Jyxo/Spl))
