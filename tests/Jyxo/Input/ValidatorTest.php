@@ -20,6 +20,7 @@ require_once __DIR__ . '/../../bootstrap.php';
  * @license https://github.com/jyxo/php/blob/master/license.txt
  * @author Jan Pěček
  * @author Jaroslav Hanslík
+ * @author Ondřej Nešpor
  */
 class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 {
@@ -36,6 +37,31 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 	 * @var string
 	 */
 	const ERROR_MESSAGE = 'Error!';
+
+	/**
+	 * Tests Tests InArray validator.
+	 */
+	public function testInArray()
+	{
+		$values = array(1, 2, '3', null, 'foo');
+
+		$good = array(
+			1,
+			null,
+			true,
+			false,
+			'',
+			'2',
+			'foo'
+		);
+		$wrong = array(
+			'bah',
+			4,
+			1.5
+		);
+
+		$this->executeTests(new Jyxo_Input_Validator_InArray($values), $good, $wrong);
+	}
 
 	/**
 	 * Tests Tests IsArray validator.

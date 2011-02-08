@@ -48,6 +48,6 @@ class Jyxo_Input_Validator_InArray extends Jyxo_Input_Validator_AbstractValidato
 	 */
 	public function isValid($value)
 	{
-		return in_array($value, $this->allowed, true);
+		return in_array($value, $this->allowed);
 	}
 }
