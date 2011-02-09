@@ -323,6 +323,7 @@ class Jyxo_FirePhp
 				unset($variable[$k]);
 				$variable[$k] = self::replaceVariable($v);
 			}
+			return $variable;
 		} else {
 			return $variable;
 		}
