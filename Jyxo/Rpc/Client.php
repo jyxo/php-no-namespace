@@ -44,11 +44,11 @@ abstract class Jyxo_Rpc_Client
 	protected $options = array();
 
 	/**
-	 * Request start time.
+	 * Timer name.
 	 *
-	 * @var float
+	 * @var string
 	 */
-	private $time = 0;
+	private $timer = '';
 
 	/**
 	 * Whether to use request profiler.
@@ -223,7 +223,9 @@ abstract class Jyxo_Rpc_Client
 	protected function profileStart()
 	{
 		// Set start time
-		$this->time = microtime(true);
+		if ($this->profiler) {
+			$this->timer = Jyxo_Timer::start();
+		}
 
 		return $this;
 	}
@@ -245,7 +247,7 @@ abstract class Jyxo_Rpc_Client
 			static $requests = array();
 
 			// Get elapsed time
-			$time = microtime(true) - $this->time;
+			$time = Jyxo_Timer::stop($this->timer);
 
 			$totalTime += $time;
 			$requests[] = array(strtoupper($type), (string) $method, $params, $response, sprintf('%0.3f', $time * 1000));
