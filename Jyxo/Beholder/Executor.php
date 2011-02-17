@@ -229,7 +229,7 @@ class Jyxo_Beholder_Executor
 	private function runTest($ident)
 	{
 		// Runs the test
-		$start = microtime(true);
+		$timer = Jyxo_Timer::start();
 		$result = $this->tests[$ident]->run();
 		if (!($result instanceof Jyxo_Beholder_Result)) {
 			throw new UnexpectedValueException(sprintf('Result %s of the test %s is not a Jyxo_Beholder_Result instance.', $result, $ident));
@@ -240,7 +240,7 @@ class Jyxo_Beholder_Executor
 			'ident' => $ident,
 			'test' => $this->tests[$ident],
 			'result' => $result,
-			'duration' => microtime(true) - $start
+			'duration' => Jyxo_Timer::stop($timer)
 		);
 	}
 
