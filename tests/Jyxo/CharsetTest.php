@@ -24,17 +24,34 @@ require_once __DIR__ . '/../bootstrap.php';
 class Jyxo_CharsetTest extends PHPUnit_Framework_TestCase
 {
 	/**
+	 * Tests detect function.
+	 */
+	public function testDetect()
+	{
+		$this->assertEquals('UTF-8', Jyxo_Charset::detect('žluťoučký kůň příšerně úpěl ďábelské ódy'));
+		$this->assertEquals('UTF-8', Jyxo_Charset::detect('Государственный гимн Российской Федерации'));
+
+		$this->assertEquals('WINDOWS-1250', Jyxo_Charset::detect(file_get_contents(DIR_FILES . '/charset/cp1250.txt')));
+		$this->assertEquals('ISO-8859-2', Jyxo_Charset::detect(file_get_contents(DIR_FILES . '/charset/iso-8859-2.txt')));
+	}
+
+	/**
 	 * Tests conversion functions.
 	 */
 	public function testConvert()
 	{
 		$this->assertRegExp('~^[a-z0-9]([a-z0-9\-]*[a-z0-9])?$~', Jyxo_Charset::utf2ident('žluťoučký kůň příšerně úpěl ďábelské ódy'));
+		$this->assertEquals('zlutoucky-kun-priserne-upel-dabelske-ody', Jyxo_Charset::utf2ident('?žluťoučký  +  kůň příšerně úpěl ďábelské ódy...'));
 		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_Charset::utf2ascii('žluťoučký kůň příšerně úpěl ďábelské ódy'));
 		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_Charset::win2ascii(file_get_contents(DIR_FILES . '/charset/cp1250.txt')));
 		$this->assertEquals('zlutoucky kun priserne upel dabelske ody', Jyxo_Charset::iso2ascii(file_get_contents(DIR_FILES . '/charset/iso-8859-2.txt')));
-		$this->assertEquals('zlutoucky-kun-priserne-upel-dabelske-ody', Jyxo_Charset::utf2ident('?žluťoučký  +  kůň příšerně úpěl ďábelské ódy...'));
 		$this->assertEquals('Rossija', Jyxo_Charset::russian2ascii('Россия'));
 		$this->assertEquals('Gosudarstvennyj gimn Rossijskoj Federacii', Jyxo_Charset::russian2ascii('Государственный гимн Российской Федерации'));
+
+		$this->assertEquals('žluťoučký kůň příšerně úpěl ďábelské ódy', Jyxo_Charset::convert2utf('žluťoučký kůň příšerně úpěl ďábelské ódy'));
+		$this->assertEquals('Государственный гимн Российской Федерации', Jyxo_Charset::convert2utf('Государственный гимн Российской Федерации'));
+		$this->assertEquals('žluťoučký kůň příšerně úpěl ďábelské ódy', Jyxo_Charset::convert2utf(file_get_contents(DIR_FILES . '/charset/cp1250.txt'), 'windows-1250'));
+		$this->assertEquals('žluťoučký kůň příšerně úpěl ďábelské ódy', Jyxo_Charset::convert2utf(file_get_contents(DIR_FILES . '/charset/iso-8859-2.txt')));
 	}
 
 	/**
