@@ -59,7 +59,7 @@ class Jyxo_String
 		$string = trim($string);
 
 		// No trimming is needed
-		if (mb_strlen($string) <= $max) {
+		if (mb_strlen($string, 'utf-8') <= $max) {
 			return $string;
 		}
 
@@ -69,18 +69,18 @@ class Jyxo_String
 				$etcLength = 1;
 				break;
 			default:
-				$etcLength = mb_strlen(html_entity_decode($etc));
+				$etcLength = mb_strlen(html_entity_decode($etc, ENT_COMPAT, 'utf-8'), 'utf-8');
 				break;
 		}
 
 		// Look for word boundaries
-		$search = mb_substr($string, 0, ($max - $etcLength) + 1);
+		$search = mb_substr($string, 0, ($max - $etcLength) + 1, 'utf-8');
 		if (preg_match('~[^\w\pL\pN]~u', $search)) {
 			// Boundary found
 			$string = preg_replace('~[^\w\pL\pN]*[\w\pL\pN]*$~uU', '', $search);
 		} else {
 			// No word boundary found, will trim in the middle of a word
-			$string = mb_substr($string, 0, $max - $etcLength);
+			$string = mb_substr($string, 0, $max - $etcLength, 'utf-8');
 		}
 
 		// Add "etc" at the end
@@ -163,7 +163,7 @@ class Jyxo_String
 	 */
 	public static function lcfirst($string)
 	{
-		return mb_strtolower(mb_substr($string, 0, 1)) . mb_substr($string, 1);
+		return mb_strtolower(mb_substr($string, 0, 1, 'utf-8')) . mb_substr($string, 1, mb_strlen($string, 'utf-8') - 1, 'utf-8');
 	}
 
 	/**

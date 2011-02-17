@@ -78,7 +78,7 @@ class Jyxo_Input_Validator_StringLengthGreaterThan extends Jyxo_Input_Validator_
 	 */
 	public function isValid($value)
 	{
-		return mb_strlen((string) $value) > $this->getMin();
+		return mb_strlen((string) $value, 'utf-8') > $this->getMin();
 	}
 
 }

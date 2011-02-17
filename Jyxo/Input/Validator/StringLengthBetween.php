@@ -123,7 +123,7 @@ class Jyxo_Input_Validator_StringLengthBetween extends Jyxo_Input_Validator_Abst
 	 */
 	public function isValid($value)
 	{
-		$length = mb_strlen((string) $value);
+		$length = mb_strlen((string) $value, 'utf-8');
 		return ($length >= $this->getMin()) && ($length <= $this->getMax());
 	}
 }

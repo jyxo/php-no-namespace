@@ -32,6 +32,6 @@ class Jyxo_Input_Filter_LowerCase extends Jyxo_Input_Filter_AbstractFilter
 	 */
 	protected function filterValue($in)
 	{
-		return mb_strtolower($in);
+		return mb_strtolower($in, 'utf-8');
 	}
 }
