@@ -459,6 +459,30 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * Tests Equals validator.
+	 *
+	 */
+	public function testEquals()
+	{
+		$expected = 123;
+		$good = array(
+			123,
+			'123',
+			true
+		);
+		$bad = array(
+			12,
+			'A123',
+			false,
+		);
+
+		$validator = new Jyxo_Input_Validator_Equals($expected);
+
+		$this->executeTests($validator, $good, $bad);
+		$this->assertSame($expected, $validator->getExpected());
+	}
+
+	/**
 	 * Tests NotEmpty validator.
 	 */
 	public function testNotEmpty()
