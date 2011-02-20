@@ -78,6 +78,16 @@ class Jyxo_Input_FilterTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * Tests Phone filter.
+	 */
+	public function testPhone()
+	{
+		$filter = new Jyxo_Input_Filter_Phone();
+
+		$this->filterTest($filter, array('123 456 789', '604604 604', '+420 604 604 604', 'foo bar'), array('123456789', '+420604604604', '+420604604604', 'foobar'));
+	}
+
+	/**
 	 * Tests SanitizeUrl filter.
 	 */
 	public function testSanitizeUrl()

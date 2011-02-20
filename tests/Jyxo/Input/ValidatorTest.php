@@ -372,6 +372,10 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 		);
 
 		$this->executeTests(new Jyxo_Input_Validator_IsTaxId(), $good, $wrong);
+
+		// Try the so called "own numbers"
+		$taxId = 'CZ12345678';
+		$this->executeTests(new Jyxo_Input_Validator_IsTaxId(false), array($taxId), array());
 	}
 
 	/**
@@ -472,6 +476,32 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 		);
 
 		$this->executeTests(new Jyxo_Input_Validator_NotEmpty(), $good, $wrong);
+	}
+
+	/**
+	 * Tests Regex validator.
+	 */
+	public function testRegex()
+	{
+		$good = array(
+			'test',
+			'123',
+			'JYXO'
+		);
+		$wrong = array(
+			'test-test',
+			'$test',
+			'--',
+			'..//'
+		);
+		$pattern = '~^\w+$~i';
+
+		$validator = new Jyxo_Input_Validator_Regex($pattern);
+		$this->executeTests($validator, $good, $wrong);
+		$this->assertEquals($pattern, $validator->getPattern());
+
+		$this->setExpectedException('Jyxo_Input_Validator_Exception');
+		$validator->setPattern('');
 	}
 
 	/**
