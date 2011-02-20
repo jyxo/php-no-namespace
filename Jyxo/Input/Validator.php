@@ -32,10 +32,14 @@ class Jyxo_Input_Validator
 	 */
 	public static function __callStatic($method, array $params)
 	{
-		$factory = Jyxo_Spl_ObjectCache::get('Jyxo_Input_Factory') ?: Jyxo_Spl_ObjectCache::set('Jyxo_Input_Factory', new Jyxo_Input_Factory());
-		$value = array_shift($params);
-		$key = 'Jyxo_Input_Validator_' . ucfirst($method) . ($params ? '/' . serialize($params) : '');
-		$validator = Jyxo_Spl_ObjectCache::get($key) ?: Jyxo_Spl_ObjectCache::set($key, $factory->getValidatorByName($method, $params));
+		try {
+			$factory = Jyxo_Spl_ObjectCache::get('Jyxo_Input_Factory') ?: Jyxo_Spl_ObjectCache::set('Jyxo_Input_Factory', new Jyxo_Input_Factory());
+			$value = array_shift($params);
+			$key = 'Jyxo_Input_Validator_' . ucfirst($method) . ($params ? '/' . serialize($params) : '');
+			$validator = Jyxo_Spl_ObjectCache::get($key) ?: Jyxo_Spl_ObjectCache::set($key, $factory->getValidatorByName($method, $params));
+		} catch (Exception $e) {
+			$validator = $factory->getValidatorByName($method, $params);
+		}
 		return $validator->isValid($value);
 	}
 }

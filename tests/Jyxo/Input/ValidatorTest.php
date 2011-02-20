@@ -12,6 +12,7 @@
  */
 
 require_once __DIR__ . '/../../bootstrap.php';
+require_once __DIR__ . '/../../files/input/Validator.php';
 
 /**
  * Tests of Jyxo_Input package validators.
@@ -589,6 +590,81 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * Tests Callback validator.
+	 */
+	public function testCallback()
+	{
+		$good = array(
+			1, '1', '0.1'
+		);
+		$wrong = array(
+			new stdClass(), false, 'OLOL'
+		);
+
+		$callbacks = array(
+			'is_numeric',
+			create_function('$a', 'return is_numeric($a);'),
+			'SomeOtherPrefix_Some_Validator::isNumeric',
+			array('SomeOtherPrefix_Some_Validator', 'isNumeric'),
+			function($a) { return is_numeric($a); }
+		);
+
+		foreach ($callbacks as $callback) {
+			$validator = new Jyxo_Input_Validator_Callback($callback);
+			foreach ($good as $value) {
+				$this->assertTrue($validator->isValid($value));
+			}
+			foreach ($wrong as $value) {
+				$this->assertFalse($validator->isValid($value));
+			}
+
+			$this->assertSame($callback, $validator->getCallback());
+			$this->assertSame(array(), $validator->getAdditionalParams());
+		}
+
+		// Test additional parameters
+		$good = array(3, 9, 33);
+		$wrong = array(2, 100, true, new stdClass(), 'OHAI');
+		$callback = function($value, $divisor) { return is_numeric($value) && (0 === $value % $divisor); };
+
+		$validator = new Jyxo_Input_Validator_Callback($callback, 3);
+		$this->assertSame(array(3), $validator->getAdditionalParams());
+		foreach ($good as $value) {
+			$this->assertTrue($validator->isValid($value));
+		}
+		foreach ($wrong as $value) {
+			$this->assertFalse($validator->isValid($value));
+		}
+
+
+		// Ensure that there is no such function defined
+		$funcName = 'definitelyNonExistentFunction';
+		if (function_exists($funcName)) {
+			$this->markTestSkipped(sprintf('Function %s exists', $funcName));
+		}
+
+		// Test exception on invalid callback definition
+		$invalidCallbacks = array(
+			$funcName,
+			true,
+			1,
+			new stdClass()
+		);
+
+		foreach ($invalidCallbacks as $callback) {
+			try {
+				$validator = new Jyxo_Input_Validator_Callback($callback);
+				$this->fail('Expected exception Jyxo_Input_Validator_Exception.');
+			} catch (PHPUnit_Framework_AssertionFailedError $e) {
+				throw $e;
+			} catch (Exception $e) {
+				// Correctly thrown exception
+				$this->assertInstanceOf('Jyxo_Input_Validator_Exception', $e);
+			}
+		}
+	}
+
+	/**
 	 * Tests static call usage.
 	 */
 	public function testCallStatic()
@@ -596,6 +672,11 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 		static $value = 42;
 		$this->assertTrue(Jyxo_Input_Validator::isInt($value));
 		$this->assertTrue(Jyxo_Input_Validator::lessThan($value, $value * 2));
+		$this->assertTrue(Jyxo_Input_Validator::callback(
+				$value,
+				function ($value, $lowerBound) { return is_numeric($value) && $value > $lowerBound; },
+				41
+		));
 
 		// Tests storing in cache - the first on in cached, the second one isn't
 		// because it had additional parameters that had been added to the cache ID
