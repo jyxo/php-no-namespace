@@ -628,7 +628,7 @@ class Jyxo_Input_ValidatorTest extends PHPUnit_Framework_TestCase
 		$wrong = array(2, 100, true, new stdClass(), 'OHAI');
 		$callback = function($value, $divisor) {
 			return is_numeric($value) && (0 === $value % $divisor);
-		}
+		};
 
 		$validator = new Jyxo_Input_Validator_Callback($callback, 3);
 		$this->assertSame(array(3), $validator->getAdditionalParams());
