@@ -168,7 +168,7 @@ class Jyxo_Time_TimeTest extends PHPUnit_Framework_TestCase
 	public function testMagicGet()
 	{
 		// Basic types
-		$timeZone = new DateTimeZone('GMT-7');
+		$timeZone = new DateTimeZone('Etc/GMT-7');
 		$time = new Jyxo_Time_Time('2009-10-10', $timeZone);
 
 		$this->assertEquals('2009-10-10T00:00:00+0700', $time->sql);
@@ -258,7 +258,7 @@ class Jyxo_Time_TimeTest extends PHPUnit_Framework_TestCase
 
 		// Try unix timestamp in different timezones
 		$time = Jyxo_Time_Time::get('2001-12-12 21:34:18', 'UTC');
-		$time2 = Jyxo_Time_Time::get('2001-12-12 19:34:18', 'GMT+2'); // The time is set back 2 hours to get the same UTC time
+		$time2 = Jyxo_Time_Time::get('2001-12-12 19:34:18', 'Etc/GMT+2'); // The time is set back 2 hours to get the same UTC time
 		$this->assertSame((string) $time, (string) $time2);
 
 		// Change one timezone and try again
@@ -413,7 +413,7 @@ class Jyxo_Time_TimeTest extends PHPUnit_Framework_TestCase
 		$time = new Jyxo_Time_Time(gmdate('Y-m-d', $timestamp) . ' 00:00:00', 'UTC');
 
 		$day = $days[date('N', $timestamp) - 1];
-		$this->assertSame(sprintf('%s %s %s 05:00:00', $day, gmdate('Y-m-d', $timestamp), _('at')), $time->formatExtended('l Y-m-d', 'H:i:s', 'GMT-5'));
+		$this->assertSame(sprintf('%s %s %s 05:00:00', $day, gmdate('Y-m-d', $timestamp), _('at')), $time->formatExtended('l Y-m-d', 'H:i:s', 'Etc/GMT-5'));
 
 	}
 

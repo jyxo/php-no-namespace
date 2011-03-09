@@ -642,15 +642,12 @@ class Jyxo_Time_Time implements Serializable
 	 */
 	public function plus($interval)
 	{
-		$dateTime = clone $this->dateTime;
-
-		// Unix timestamp
 		if (is_numeric($interval)) {
-			$dateTime->modify('@' . $interval);
-		} else {
-			// String compatible with strtotime() function
-			$dateTime->modify('+' . (string) $interval);
+			$interval .= ' seconds';
 		}
+
+		$dateTime = clone $this->dateTime;
+		$dateTime->modify('+' . (string) $interval);
 
 		return new self($dateTime);
 	}
@@ -663,15 +660,12 @@ class Jyxo_Time_Time implements Serializable
 	 */
 	public function minus($interval)
 	{
-		$dateTime = clone $this->dateTime;
-
-		// Unix timestamp
 		if (is_numeric($interval)) {
-			$dateTime->modify('@-' . $interval);
-		} else {
-			// String compatible with strtotime() function
-			$dateTime->modify('-' . (string) $interval);
+			$interval .= ' seconds';
 		}
+
+		$dateTime = clone $this->dateTime;
+		$dateTime->modify('-' . (string) $interval);
 
 		return new self($dateTime);
 	}
