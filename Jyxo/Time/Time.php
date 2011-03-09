@@ -336,14 +336,14 @@ class Jyxo_Time_Time implements Serializable
 	/**
 	 * Sets a time zone temporarily.
 	 *
-	 * @param string|DateTimeZone $timezone Temporary time zone definition
+	 * @param string|DateTimeZone $timeZone Temporary time zone definition
 	 * @throws InvalidArgumentException If an invalid time zone definition was provided
 	 */
-	protected function setTemporaryTimeZone($timezone)
+	protected function setTemporaryTimeZone($timeZone)
 	{
 		$this->originalTimeZone = $this->dateTime->getTimezone();
 		try {
-			$this->setTimeZone($this->createTimeZone($timezone));
+			$this->setTimeZone($this->createTimeZone($timeZone));
 		} catch (InvalidArgumentException $e) {
 			$this->originalTimeZone = null;
 			throw $e;
@@ -370,7 +370,7 @@ class Jyxo_Time_Time implements Serializable
 	 * Returns date/time in the given format with months and days translated.
 	 *
 	 * @param string $format Requested format
-	 * @param string|DateTimeZone $timezone Result time zone definition
+	 * @param string|DateTimeZone $timeZone Result time zone definition
 	 * @return string
 	 */
 	public function format($format, $timeZone = null)
@@ -460,7 +460,7 @@ class Jyxo_Time_Time implements Serializable
 	 *
 	 * @param string $dateFormat Date format
 	 * @param string $timeFormat Time format
-	 * @param string|DateTimeZone $timezone Result time zone definition
+	 * @param string|DateTimeZone $timeZone Result time zone definition
 	 * @return string
 	 */
 	public function formatExtended($dateFormat = 'j. F Y', $timeFormat = 'G:i', $timeZone = null)
@@ -517,7 +517,7 @@ class Jyxo_Time_Time implements Serializable
 	 * 1 year <= $t < n years
 	 *
 	 * @param boolean $useTense Defines if declension should be used
-	 * @param string|DateTimeZone $timezone Result time zone definition
+	 * @param string|DateTimeZone $timeZone Result time zone definition
 	 * @return string
 	 */
 	public function formatAsInterval($useTense = true, $timeZone = null)

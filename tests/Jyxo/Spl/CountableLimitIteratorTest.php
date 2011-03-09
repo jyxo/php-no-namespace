@@ -67,7 +67,6 @@ class Jyxo_Spl_CountableLimitIteratorTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Tests the count() method when the limit is out of the inner Iterator.
-	 *
 	 */
 	public function testOutOfBounds()
 	{

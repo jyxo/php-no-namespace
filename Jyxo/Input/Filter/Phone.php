@@ -26,7 +26,7 @@ class Jyxo_Input_Filter_Phone extends Jyxo_Input_Filter_AbstractFilter
 	/**
 	 * Filters a value.
 	 *
-	 * @param mixed $in Input value
+	 * @param mixed $value Input value
 	 * @return mixed
 	 */
 	protected function filterValue($value)

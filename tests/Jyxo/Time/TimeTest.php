@@ -112,7 +112,7 @@ class Jyxo_Time_TimeTest extends PHPUnit_Framework_TestCase
 		}
 
 		try {
-			$tmp = new Jyxo_Time_Time($dateTime, (object)array('foo' => 'bar'));
+			$tmp = new Jyxo_Time_Time($dateTime, (object) array('foo' => 'bar'));
 			$this->fail('Expected exception InvalidArgumentException.');
 		} catch (PHPUnit_Framework_AssertionFailedError $e) {
 			throw $e;
@@ -650,7 +650,7 @@ class Jyxo_Time_TimeTest extends PHPUnit_Framework_TestCase
 		$timeInstance = new Jyxo_Time_Time($time, $timeZone);
 
 		$this->assertSame(
-			'C:14:"Jyxo_Time_Time":' . (20 + strlen(date_default_timezone_get())) .':{' . date('Y-m-d H:i:s', $time) . ' ' . date_default_timezone_get() .'}',
+			'C:14:"Jyxo_Time_Time":' . (20 + strlen(date_default_timezone_get())) . ':{' . date('Y-m-d H:i:s', $time) . ' ' . date_default_timezone_get() . '}',
 			serialize($timeInstance)
 		);
 	}

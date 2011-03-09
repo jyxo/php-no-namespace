@@ -61,7 +61,7 @@ class Jyxo_Input_Validator_Callback extends Jyxo_Input_Validator_AbstractValidat
 	 */
 	public function setCallback($callback)
 	{
-		if (is_string($callback) || is_array($callback))  {
+		if (is_string($callback) || is_array($callback)) {
 			if (!is_callable($callback)) {
 				throw new Jyxo_Input_Validator_Exception('Invalid callback definition');
 			}
