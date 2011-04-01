@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="Nette Framework Apigen" />
+	<title>Jyxo PHP Library | Class Jyxo_Html</title>
+
+	<script type="text/javascript" src="media/combined.js"></script>
+	<script type="text/javascript" src="allclasses.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="media/style.css?v=2011040113" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+<div id="main">
+<div id="leftWrapper">
+	<div id="left">
+		<a href="allclasses.html">All Classes</a>
+
+		<h3>Packages</h3>
+		<ul>
+			<li class="all"><a href="overview.html#packages">All</a></li>
+			<li><a href="package-Jyxo_Html.html" class="active">Jyxo_Html</a></li>
+		</ul>
+
+
+		<h3>Classes</h3>
+
+		<ul>
+			<li class="all"><a href="allclasses.html#classes">All</a></li>
+				<li class="all"><a href="package-Jyxo_Html.html#classes">All in package Jyxo_Html</a></li>
+			<li><a href="Jyxo_Html.html" class="active">Jyxo_Html</a></li>
+		</ul>
+
+	</div>
+</div>
+<div id="rightWrapper">
+	<div id="right">
+		<form action="http://www.google.com/cse" id="search" onsubmit="if(this.q.value.indexOf('more:')==-1)this.q.value+=' more:api'">
+			<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc" /><input type="hidden" name="ie" value="UTF-8" /><input type="text" name="q" class="text" /><input type="submit" value="Search" />
+		</form>
+
+<div id="navigation">
+	<ul>
+		<li><a href="overview.html" title="Summary of all namespaces">Overview</a></li>		<li class="active">Class</li>
+		<li><a href="elements.html">Elements</a></li>
+	</ul>
+</div>
+
+<div id="content">
+	<div id="classSummary">
+		<h1>Class Jyxo_Html</h1>
+		<div class="classDescription">
+
+		
+<p>Functions for HTML processing.</p>
+
+		</div>
+
+		<div class="classInfo">
+			
+					<b>Category:</b>
+						Jyxo<br />
+					<b>Package:</b>
+						<a href="package-Jyxo_Html.html">Jyxo_Html</a><br />
+					<b>Copyright:</b>
+						Copyright © 2005–2011 Jyxo, s.r.o.<br />
+					<b>License:</b>
+						<a
+href="https://github.com/jyxo/php/blob/master/license.txt">https://github.com/…/license.txt</a><br />
+					<b>Author:</b>
+						Jaroslav Hanslík<br />
+			<b>Located at</b> <a href="source-Html.php.html#14">/Html.php</a><br />
+		</div>
+	</div>
+
+	<div id="methodSummary">
+
+		<table class="summary">
+		<caption>Method Summary</caption>
+		<tr data-order="1 __construct" id="___construct">
+			<td align="right" width="1%"><code class="nowrap">
+				final public 
+				
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#___construct">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#25" title="go to source code"><b>__construct</b></a>(
+			)</code>
+
+			<div class="short">
+				
+<p>Constructor preventing from creating instances of a static class.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Constructor preventing from creating instances of a static class.</p>
+
+
+
+
+
+					<h4>Throws</h4>
+					<div class="smallList">
+						<a href="LogicException.html">LogicException</a> If trying to create an instance<br />
+					</div>
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 is" id="_is">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_is">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#35" title="go to source code"><b>is</b></a>(
+					string
+					<var>$text</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Tests if the given text contains at least one HTML tag.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Tests if the given text contains at least one HTML tag.<br>
+It is just an estimation.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$text</code> string $text Input text to be tested<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">boolean </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 repair" id="_repair">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_repair">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#47" title="go to source code"><b>repair</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Fixes an invalid HTML source, unifies quotes and removes unnecessary
+whitespace.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Fixes an invalid HTML source, unifies quotes and removes unnecessary
+whitespace.<br>
+Required the Tidy PHP extension.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html Input HTML source<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeTags" id="_removeTags">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeTags">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#106" title="go to source code"><b>removeTags</b></a>(
+					string
+					<var>$html</var>, 
+					array
+					
+					<var>$tags</var> = <span class="php-keyword1">array</span> (
+)
+			)</code>
+
+			<div class="short">
+				
+<p>Removes given tags from the HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes given tags from the HTML source.<br>
+If no tags are given, the default set is used.<br>
+Expects valid HTML code.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+						<code>$tags</code> array $tags Tags to be removed<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeInnerTags" id="_removeInnerTags">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeInnerTags">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#157" title="go to source code"><b>removeInnerTags</b></a>(
+					string
+					<var>$html</var>, 
+					string
+					<var>$tag</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Removes tags of the same type nested into each other from the HTML
+source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes tags of the same type nested into each other from the HTML
+source.<br>
+Expects valid HTML source</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+						<code>$tag</code> string $tag Tags to be processed<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeAttributes" id="_removeAttributes">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeAttributes">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#192" title="go to source code"><b>removeAttributes</b></a>(
+					string
+					<var>$html</var>, 
+					array
+					
+					<var>$attributes</var> = <span class="php-keyword1">array</span> (
+)
+			)</code>
+
+			<div class="short">
+				
+<p>Removes given attributes from the HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes given attributes from the HTML source.<br>
+If no attributes are given, the default set will be used.<br>
+Expects valid HTML source.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+						<code>$attributes</code> array $attributes Attributes to be removed<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeJavascriptEvents" id="_removeJavascriptEvents">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeJavascriptEvents">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#219" title="go to source code"><b>removeJavascriptEvents</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Removes all javascript events from the HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes all javascript events from the HTML source.<br>
+If it is necessary to remove only certain events, the removeAttributes() method
+can be used.<br>
+Expects valid HTML source.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeRemoteImages" id="_removeRemoteImages">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeRemoteImages">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#236" title="go to source code"><b>removeRemoteImages</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Removes foreign images from the HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes foreign images from the HTML source.<br>
+Keeps &lt;img&gt; tags (only set the value about:blank into its src attribute),
+because removing the tag entirely could affect<br>
+the page layout.<br>
+Expects valid HTML source.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 removeDangerous" id="_removeDangerous">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_removeDangerous">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#268" title="go to source code"><b>removeDangerous</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Removes possibly dangerous attributes that could contain XSS code from the
+HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Removes possibly dangerous attributes that could contain XSS code from the
+HTML source.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 getBody" id="_getBody">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_getBody">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#286" title="go to source code"><b>getBody</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Returns &lt;body&gt; contents from the given HTML source.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Returns &lt;body&gt; contents from the given HTML source.<br>
+Expects valid HTML source.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 fromText" id="_fromText">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_fromText">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#311" title="go to source code"><b>fromText</b></a>(
+					string
+					<var>$text</var>, 
+					boolean
+					<var>$convertLinks</var> = <span class="php-keyword1">true</span>
+			)</code>
+
+			<div class="short">
+				
+<p>Converts text to HTML source code.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Converts text to HTML source code.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$text</code> string $text Input text<br />
+						<code>$convertLinks</code> boolean $convertLinks Convert urls and emails to links<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 linkFromText" id="_linkFromText">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_linkFromText">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#381" title="go to source code"><b>linkFromText</b></a>(
+					string
+					<var>$text</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Converts text to a link to an url or email.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Converts text to a link to an url or email.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$text</code> string $text Input text<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		<tr data-order="0 toText" id="_toText">
+			<td align="right" width="1%"><code class="nowrap">
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td>
+			<a class="anchor" href="#_toText">#</a>
+			<code class="nowrap">
+				<a href="source-Html.php.html#454" title="go to source code"><b>toText</b></a>(
+					string
+					<var>$html</var>
+			)</code>
+
+			<div class="short">
+				
+<p>Converts HTML source code to plaintext.</p>
+
+			</div>
+
+			<div class="detailed">
+				
+<p>Converts HTML source code to plaintext.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="smallList">
+						<code>$html</code> string $html HTML source code<br />
+					</div>
+
+					<h4>Returns</h4>
+					<div class="smallList">string </div>
+
+
+			</div>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+
+
+
+
+
+
+</div>
+
+		<div id="footer">
+			Jyxo PHP Library generated by <a href="http://github.com/nette/apigen">Apigen</a>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
