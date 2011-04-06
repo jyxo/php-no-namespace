@@ -27,6 +27,10 @@ The code you find here is in actual use in various projects and to the best
 of our knowledge, it can be considered stable. But as always, read the License
 first.
 
+##API documentation
+
+You can find the automatically generated documentation at [http://jyxo.github.com/php-no-namespace](http://jyxo.github.com/php-no-namespace). 
+
 ##Original library authors
 
 Many developers have contributed to the library throughout the years. Here are
