@@ -1751,13 +1751,16 @@ var getScrollbarWidth = function() {
 	$(function(){
 
 	// enables search autocompletion
-	$("#search input[type=text]").autocomplete(classes, {
-		matchContains: true,
-		scrollHeight: 200,
-		max: 20,
-		formatItem: function(row) { return row[0].replace(/^(.+\\)(.+)$/, '<small>$1</small>$2'); },
-		formatMatch: function(row) { return row[0]; }
-	});
+	var $search = $("#search input[type=text]");
+	if ($search.size()) {
+		$search.autocomplete(classes, {
+			matchContains: true,
+			scrollHeight: 200,
+			max: 20,
+			formatItem: function(row) { return row[0].replace(/^(.+\\)(.+)$/, '<small>$1</small>$2'); },
+			formatMatch: function(row) { return row[0]; }
+		});
+	}
 
 	// saves original order
 	$("table.summary:has(tr[data-order]) tr").each(function(index) {
@@ -1782,28 +1785,35 @@ var getScrollbarWidth = function() {
 		$("table.summary:has(tr[data-order]) caption").click();
 	}
 
-	// delayed hover efect on method summary
+	// delayed hover efect on summary
 	var timeout;
 	$("tr:has(.detailed)").hover(function(){
 		clearTimeout(timeout);
-		var $tr = $(this);
+		var $this = $(this);
 		timeout = setTimeout(function(){
-			$tr.find('.short').hide();
-			$tr.find('.detailed').show();
+			$this.find('.short').hide();
+			$this.find('.detailed').show();
 		}, 500);
 	}, function(){
 		clearTimeout(timeout);
 
-	}).click(function(){ // immediate hover effect on method summary
+	}).click(function(){ // immediate hover effect on summary
 		clearTimeout(timeout);
-		$(this).find('.short').hide();
-		$(this).find('.detailed').show();
+		var $this = $(this);
+		$this.find('.short').hide();
+		$this.find('.detailed').show();
 	});
 
 	// hide deep namespaces
 	$('#left ul li ul li:not(.active):not(:has(.active)) ul').addClass('collapsed');
 	$('#left > ul > li > ul > li').hover(function() {
-		$('ul.collapsed', this).stop(true, true).delay(300).slideDown();
+		clearTimeout(timeout);
+		var $this = $(this);
+		timeout = setTimeout(function() {
+			$('ul.collapsed', $this).stop(true, true).slideDown();
+		}, 500);
+	}, function() {
+		clearTimeout(timeout);
 	});
 
 	// splitter
