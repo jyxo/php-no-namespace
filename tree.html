@@ -2,1048 +2,979 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.0 beta; http://apigen.org" />
-	<title>Jyxo PHP Library | Tree</title>
+	<meta name="generator" content="TR ApiGen 2.0 beta 3" />
 
-	<script type="text/javascript" src="resources/combined.js?4162569229"></script>
-	<script type="text/javascript" src="allclasses.js?1830103054"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?359102851" />
-	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />	<link rel="search" type="application/opensearchdescription+xml" title="Jyxo PHP Library" href="http://jyxo.github.com/php-no-namespace/opensearch.xml" />
+	<title>Tree | Jyxo PHP Library</title>
+
+	<script type="text/javascript" src="resources/combined.js?134547457"></script>
+	<script type="text/javascript" src="elementlist.js?4174917431"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3003541655" />
+	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Jyxo PHP Library" href="http://jyxo.github.com/php-no-namespace/opensearch.xml" />
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-23550486-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 </head>
 
 <body>
 <div id="main">
 <div id="leftWrapper">
 	<div id="left">
-		<a href="index.html" id="home_link"><span>Overview</span></a>
+		<a id="home" href="index.html"><span>Overview</span></a>
 
 		<h3>Packages</h3>
-		<ul>			<li><a href="package-Jyxo_Beholder.html">Jyxo_Beholder</a></li>
-
-			<li><a href="package-Jyxo_Charset.html">Jyxo_Charset</a></li>
-
-			<li><a href="package-Jyxo_Color.html">Jyxo_Color</a></li>
-
-			<li><a href="package-Jyxo_Css.html">Jyxo_Css</a></li>
-
-			<li><a href="package-Jyxo_ErrorHandling.html">Jyxo_ErrorHandling</a></li>
-
-			<li><a href="package-Jyxo_FirePhp.html">Jyxo_FirePhp</a></li>
-
-			<li><a href="package-Jyxo_Gettext.html">Jyxo_Gettext</a></li>
-
-			<li><a href="package-Jyxo_Html.html">Jyxo_Html</a></li>
-
-			<li><a href="package-Jyxo_Input.html">Jyxo_Input</a></li>
-
-			<li><a href="package-Jyxo_Mail.html">Jyxo_Mail</a></li>
-
-			<li><a href="package-Jyxo_Rpc.html">Jyxo_Rpc</a></li>
-
-			<li><a href="package-Jyxo_Shell.html">Jyxo_Shell</a></li>
-
-			<li><a href="package-Jyxo_SpamFilter.html">Jyxo_SpamFilter</a></li>
-
-			<li><a href="package-Jyxo_Spl.html">Jyxo_Spl</a></li>
-
-			<li><a href="package-Jyxo_String.html">Jyxo_String</a></li>
-
-			<li><a href="package-Jyxo_Svn.html">Jyxo_Svn</a></li>
-
-			<li><a href="package-Jyxo_Time.html">Jyxo_Time</a></li>
-
-			<li><a href="package-Jyxo_Timer.html">Jyxo_Timer</a></li>
-
-			<li><a href="package-Jyxo_Webdav.html">Jyxo_Webdav</a></li>
-
-			<li><a href="package-Jyxo_XmlReader.html">Jyxo_XmlReader</a></li>
-
-			<li><a href="package-PHP.html">PHP</a></li>
-
+		<ul>
+			<li><a href="package-Jyxo_Beholder.html">Jyxo_Beholder</a>
+					</li>
+			<li><a href="package-Jyxo_Charset.html">Jyxo_Charset</a>
+					</li>
+			<li><a href="package-Jyxo_Color.html">Jyxo_Color</a>
+					</li>
+			<li><a href="package-Jyxo_Css.html">Jyxo_Css</a>
+					</li>
+			<li><a href="package-Jyxo_ErrorHandling.html">Jyxo_ErrorHandling</a>
+					</li>
+			<li><a href="package-Jyxo_FirePhp.html">Jyxo_FirePhp</a>
+					</li>
+			<li><a href="package-Jyxo_Gettext.html">Jyxo_Gettext</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Gettext.Parser.html">Parser</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Html.html">Jyxo_Html</a>
+					</li>
+			<li><a href="package-Jyxo_Input.html">Jyxo_Input</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Input.Chain.html">Chain</a>
+					</li>
+			<li><a href="package-Jyxo_Input.Filter.html">Filter</a>
+					</li>
+			<li><a href="package-Jyxo_Input.Validator.html">Validator</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Mail.html">Jyxo_Mail</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Mail.Email.html">Email</a>
+					</li>
+			<li><a href="package-Jyxo_Mail.Parser.html">Parser</a>
+					</li>
+			<li><a href="package-Jyxo_Mail.Sender.html">Sender</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Rpc.html">Jyxo_Rpc</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Rpc.Json.html">Json</a>
+					</li>
+			<li><a href="package-Jyxo_Rpc.Xml.html">Xml</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Shell.html">Jyxo_Shell</a>
+					</li>
+			<li><a href="package-Jyxo_SpamFilter.html">Jyxo_SpamFilter</a>
+					</li>
+			<li><a href="package-Jyxo_Spl.html">Jyxo_Spl</a>
+					</li>
+			<li><a href="package-Jyxo_String.html">Jyxo_String</a>
+					</li>
+			<li><a href="package-Jyxo_Svn.html">Jyxo_Svn</a>
+					</li>
+			<li><a href="package-Jyxo_Time.html">Jyxo_Time</a>
+					</li>
+			<li><a href="package-Jyxo_Timer.html">Jyxo_Timer</a>
+					</li>
+			<li><a href="package-Jyxo_Webdav.html">Jyxo_Webdav</a>
+					</li>
+			<li><a href="package-Jyxo_XmlReader.html">Jyxo_XmlReader</a>
+					</li>
+			<li><a href="package-PHP.html">PHP</a>
+					</li>
 		</ul>
 
 
+		<hr />
+
 		<h3>Classes</h3>
 		<ul>
-			<li><a href="ArrayIterator.html">ArrayIterator</a></li>
-
-			<li><a href="ArrayObject.html">ArrayObject</a></li>
-
-			<li><a href="Closure.html">Closure</a></li>
-
-			<li><a href="DateTime.html">DateTime</a></li>
-
-			<li><a href="DateTimeZone.html">DateTimeZone</a></li>
-
-			<li><a href="FilterIterator.html">FilterIterator</a></li>
-
-			<li><a href="HttpMessage.html">HttpMessage</a></li>
-
-			<li><a href="HttpRequest.html">HttpRequest</a></li>
-
-			<li><a href="HttpRequestPool.html">HttpRequestPool</a></li>
-
-			<li><a href="IteratorIterator.html">IteratorIterator</a></li>
-
-			<li><a href="Jyxo_Beholder_Executor.html">Jyxo_Beholder_Executor</a></li>
-
-			<li><a href="Jyxo_Beholder_Result.html">Jyxo_Beholder_Result</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase.html">Jyxo_Beholder_TestCase</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_FileSystem.html">Jyxo_Beholder_TestCase_FileSystem</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_HttpResponse.html">Jyxo_Beholder_TestCase_HttpResponse</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Imap.html">Jyxo_Beholder_TestCase_Imap</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_JsonRpc.html">Jyxo_Beholder_TestCase_JsonRpc</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Memcached.html">Jyxo_Beholder_TestCase_Memcached</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Mysql.html">Jyxo_Beholder_TestCase_Mysql</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Pgsql.html">Jyxo_Beholder_TestCase_Pgsql</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_PhpExtension.html">Jyxo_Beholder_TestCase_PhpExtension</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_PhpVersion.html">Jyxo_Beholder_TestCase_PhpVersion</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_PhpZend.html">Jyxo_Beholder_TestCase_PhpZend</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Smtp.html">Jyxo_Beholder_TestCase_Smtp</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_Webdav.html">Jyxo_Beholder_TestCase_Webdav</a></li>
-
-			<li><a href="Jyxo_Beholder_TestCase_XmlRpc.html">Jyxo_Beholder_TestCase_XmlRpc</a></li>
-
-			<li><a href="Jyxo_Charset.html">Jyxo_Charset</a></li>
-
-			<li><a href="Jyxo_Color.html">Jyxo_Color</a></li>
-
-			<li><a href="Jyxo_Css.html">Jyxo_Css</a></li>
-
-			<li><a href="Jyxo_ErrorHandler.html">Jyxo_ErrorHandler</a></li>
-
-			<li><a href="Jyxo_ErrorMail.html">Jyxo_ErrorMail</a></li>
-
-			<li><a href="Jyxo_FirePhp.html">Jyxo_FirePhp</a></li>
-
-			<li><a href="Jyxo_Gettext_Parser.html">Jyxo_Gettext_Parser</a></li>
-
-			<li><a href="Jyxo_Gettext_Parser_Header.html">Jyxo_Gettext_Parser_Header</a></li>
-
-			<li><a href="Jyxo_Gettext_Parser_Item.html">Jyxo_Gettext_Parser_Item</a></li>
-
-			<li><a href="Jyxo_Html.html">Jyxo_Html</a></li>
-
-			<li><a href="Jyxo_HtmlTag.html">Jyxo_HtmlTag</a></li>
-
-			<li><a href="Jyxo_Input_Chain.html">Jyxo_Input_Chain</a></li>
-
-			<li><a href="Jyxo_Input_Chain_Conditional.html">Jyxo_Input_Chain_Conditional</a></li>
-
-			<li><a href="Jyxo_Input_Factory.html">Jyxo_Input_Factory</a></li>
-
-			<li><a href="Jyxo_Input_Filter.html">Jyxo_Input_Filter</a></li>
-
-			<li><a href="Jyxo_Input_Filter_AbstractFilter.html">Jyxo_Input_Filter_AbstractFilter</a></li>
-
-			<li><a href="Jyxo_Input_Filter_ExplodeName.html">Jyxo_Input_Filter_ExplodeName</a></li>
-
-			<li><a href="Jyxo_Input_Filter_LowerCase.html">Jyxo_Input_Filter_LowerCase</a></li>
-
-			<li><a href="Jyxo_Input_Filter_Phone.html">Jyxo_Input_Filter_Phone</a></li>
-
-			<li><a href="Jyxo_Input_Filter_SanitizeUrl.html">Jyxo_Input_Filter_SanitizeUrl</a></li>
-
-			<li><a href="Jyxo_Input_Filter_ToInt.html">Jyxo_Input_Filter_ToInt</a></li>
-
-			<li><a href="Jyxo_Input_Filter_Trim.html">Jyxo_Input_Filter_Trim</a></li>
-
-			<li><a href="Jyxo_Input_Fluent.html">Jyxo_Input_Fluent</a></li>
-
-			<li><a href="Jyxo_Input_Upload.html">Jyxo_Input_Upload</a></li>
-
-			<li><a href="Jyxo_Input_Validator.html">Jyxo_Input_Validator</a></li>
-
-			<li><a href="Jyxo_Input_Validator_AbstractValidator.html">Jyxo_Input_Validator_AbstractValidator</a></li>
-
-			<li><a href="Jyxo_Input_Validator_Callback.html">Jyxo_Input_Validator_Callback</a></li>
-
-			<li><a href="Jyxo_Input_Validator_Equals.html">Jyxo_Input_Validator_Equals</a></li>
-
-			<li><a href="Jyxo_Input_Validator_InArray.html">Jyxo_Input_Validator_InArray</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsArray.html">Jyxo_Input_Validator_IsArray</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsBankAccountNumber.html">Jyxo_Input_Validator_IsBankAccountNumber</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsBirthNumber.html">Jyxo_Input_Validator_IsBirthNumber</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsCompanyId.html">Jyxo_Input_Validator_IsCompanyId</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsCountryCode.html">Jyxo_Input_Validator_IsCountryCode</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsDate.html">Jyxo_Input_Validator_IsDate</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsDateTime.html">Jyxo_Input_Validator_IsDateTime</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsEmail.html">Jyxo_Input_Validator_IsEmail</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsIban.html">Jyxo_Input_Validator_IsIban</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsInt.html">Jyxo_Input_Validator_IsInt</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsIpV4.html">Jyxo_Input_Validator_IsIpV4</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsIpV6.html">Jyxo_Input_Validator_IsIpV6</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsNumeric.html">Jyxo_Input_Validator_IsNumeric</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsPhone.html">Jyxo_Input_Validator_IsPhone</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsTaxId.html">Jyxo_Input_Validator_IsTaxId</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsUrl.html">Jyxo_Input_Validator_IsUrl</a></li>
-
-			<li><a href="Jyxo_Input_Validator_IsZipCode.html">Jyxo_Input_Validator_IsZipCode</a></li>
-
-			<li><a href="Jyxo_Input_Validator_LessThan.html">Jyxo_Input_Validator_LessThan</a></li>
-
-			<li><a href="Jyxo_Input_Validator_NotEmpty.html">Jyxo_Input_Validator_NotEmpty</a></li>
-
-			<li><a href="Jyxo_Input_Validator_Regex.html">Jyxo_Input_Validator_Regex</a></li>
-
-			<li><a href="Jyxo_Input_Validator_StringLengthBetween.html">Jyxo_Input_Validator_StringLengthBetween</a></li>
-
-			<li><a href="Jyxo_Input_Validator_StringLengthGreaterThan.html">Jyxo_Input_Validator_StringLengthGreaterThan</a></li>
-
-			<li><a href="Jyxo_Input_Validator_StringLengthLessThan.html">Jyxo_Input_Validator_StringLengthLessThan</a></li>
-
-			<li><a href="Jyxo_Input_Validator_Upload.html">Jyxo_Input_Validator_Upload</a></li>
-
-			<li><a href="Jyxo_Mail_Email.html">Jyxo_Mail_Email</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Address.html">Jyxo_Mail_Email_Address</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Attachment.html">Jyxo_Mail_Email_Attachment</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Attachment_File.html">Jyxo_Mail_Email_Attachment_File</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Attachment_InlineFile.html">Jyxo_Mail_Email_Attachment_InlineFile</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Attachment_InlineString.html">Jyxo_Mail_Email_Attachment_InlineString</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Attachment_String.html">Jyxo_Mail_Email_Attachment_String</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Body.html">Jyxo_Mail_Email_Body</a></li>
-
-			<li><a href="Jyxo_Mail_Email_Header.html">Jyxo_Mail_Email_Header</a></li>
-
-			<li><a href="Jyxo_Mail_Encoding.html">Jyxo_Mail_Encoding</a></li>
-
-			<li><a href="Jyxo_Mail_Parser.html">Jyxo_Mail_Parser</a></li>
-
-			<li><a href="Jyxo_Mail_Sender.html">Jyxo_Mail_Sender</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_Result.html">Jyxo_Mail_Sender_Result</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_Smtp.html">Jyxo_Mail_Sender_Smtp</a></li>
-
-			<li><a href="Jyxo_Rpc_Client.html">Jyxo_Rpc_Client</a></li>
-
-			<li><a href="Jyxo_Rpc_Json_Client.html">Jyxo_Rpc_Json_Client</a></li>
-
-			<li><a href="Jyxo_Rpc_Json_Server.html">Jyxo_Rpc_Json_Server</a></li>
-
-			<li><a href="Jyxo_Rpc_Server.html">Jyxo_Rpc_Server</a></li>
-
-			<li><a href="Jyxo_Rpc_Xml_Client.html">Jyxo_Rpc_Xml_Client</a></li>
-
-			<li><a href="Jyxo_Rpc_Xml_Server.html">Jyxo_Rpc_Xml_Server</a></li>
-
-			<li><a href="Jyxo_Shell_Client.html">Jyxo_Shell_Client</a></li>
-
-			<li><a href="Jyxo_SpamFilter.html">Jyxo_SpamFilter</a></li>
-
-			<li><a href="Jyxo_Spl_ArrayUtil.html">Jyxo_Spl_ArrayUtil</a></li>
-
-			<li><a href="Jyxo_Spl_CountableLimitIterator.html">Jyxo_Spl_CountableLimitIterator</a></li>
-
-			<li><a href="Jyxo_Spl_FilterIterator.html">Jyxo_Spl_FilterIterator</a></li>
-
-			<li><a href="Jyxo_Spl_MapIterator.html">Jyxo_Spl_MapIterator</a></li>
-
-			<li><a href="Jyxo_Spl_Object.html">Jyxo_Spl_Object</a></li>
-
-			<li><a href="Jyxo_Spl_ObjectCache.html">Jyxo_Spl_ObjectCache</a></li>
-
-			<li><a href="Jyxo_String.html">Jyxo_String</a></li>
-
-			<li><a href="Jyxo_Svn_Client.html">Jyxo_Svn_Client</a></li>
-
-			<li><a href="Jyxo_Svn_Result.html">Jyxo_Svn_Result</a></li>
-
-			<li><a href="Jyxo_Time_Composer.html">Jyxo_Time_Composer</a></li>
-
-			<li><a href="Jyxo_Time_Time.html">Jyxo_Time_Time</a></li>
-
-			<li><a href="Jyxo_Time_Util.html">Jyxo_Time_Util</a></li>
-
-			<li><a href="Jyxo_Timer.html">Jyxo_Timer</a></li>
-
-			<li><a href="Jyxo_Webdav_Client.html">Jyxo_Webdav_Client</a></li>
-
-			<li><a href="Jyxo_XmlReader.html">Jyxo_XmlReader</a></li>
-
-			<li><a href="LimitIterator.html">LimitIterator</a></li>
-
-			<li><a href="XMLReader.html">XMLReader</a></li>
-
+			<li><a href="class-ArrayIterator.html">ArrayIterator</a></li>
+			<li><a href="class-ArrayObject.html">ArrayObject</a></li>
+			<li><a href="class-Closure.html">Closure</a></li>
+			<li><a href="class-DateTime.html">DateTime</a></li>
+			<li><a href="class-DateTimeZone.html">DateTimeZone</a></li>
+			<li><a href="class-FilterIterator.html">FilterIterator</a></li>
+			<li><a href="class-HttpMessage.html">HttpMessage</a></li>
+			<li><a href="class-HttpRequest.html">HttpRequest</a></li>
+			<li><a href="class-HttpRequestPool.html">HttpRequestPool</a></li>
+			<li><a href="class-IteratorIterator.html">IteratorIterator</a></li>
+			<li><a href="class-Jyxo_Beholder_Executor.html">Jyxo_Beholder_Executor</a></li>
+			<li><a href="class-Jyxo_Beholder_Result.html">Jyxo_Beholder_Result</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase.html">Jyxo_Beholder_TestCase</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_FileSystem.html">Jyxo_Beholder_TestCase_FileSystem</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_HttpResponse.html">Jyxo_Beholder_TestCase_HttpResponse</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Imap.html">Jyxo_Beholder_TestCase_Imap</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_JsonRpc.html">Jyxo_Beholder_TestCase_JsonRpc</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Memcached.html">Jyxo_Beholder_TestCase_Memcached</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Mysql.html">Jyxo_Beholder_TestCase_Mysql</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Pgsql.html">Jyxo_Beholder_TestCase_Pgsql</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_PhpExtension.html">Jyxo_Beholder_TestCase_PhpExtension</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_PhpVersion.html">Jyxo_Beholder_TestCase_PhpVersion</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_PhpZend.html">Jyxo_Beholder_TestCase_PhpZend</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Smtp.html">Jyxo_Beholder_TestCase_Smtp</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_Webdav.html">Jyxo_Beholder_TestCase_Webdav</a></li>
+			<li><a href="class-Jyxo_Beholder_TestCase_XmlRpc.html">Jyxo_Beholder_TestCase_XmlRpc</a></li>
+			<li><a href="class-Jyxo_Charset.html">Jyxo_Charset</a></li>
+			<li><a href="class-Jyxo_Color.html">Jyxo_Color</a></li>
+			<li><a href="class-Jyxo_Css.html">Jyxo_Css</a></li>
+			<li><a href="class-Jyxo_ErrorHandler.html">Jyxo_ErrorHandler</a></li>
+			<li><a href="class-Jyxo_ErrorMail.html">Jyxo_ErrorMail</a></li>
+			<li><a href="class-Jyxo_FirePhp.html">Jyxo_FirePhp</a></li>
+			<li><a href="class-Jyxo_Gettext_Parser.html">Jyxo_Gettext_Parser</a></li>
+			<li><a href="class-Jyxo_Gettext_Parser_Header.html">Jyxo_Gettext_Parser_Header</a></li>
+			<li><a href="class-Jyxo_Gettext_Parser_Item.html">Jyxo_Gettext_Parser_Item</a></li>
+			<li><a href="class-Jyxo_Html.html">Jyxo_Html</a></li>
+			<li><a href="class-Jyxo_HtmlTag.html">Jyxo_HtmlTag</a></li>
+			<li><a href="class-Jyxo_Input_Chain.html">Jyxo_Input_Chain</a></li>
+			<li><a href="class-Jyxo_Input_Chain_Conditional.html">Jyxo_Input_Chain_Conditional</a></li>
+			<li><a href="class-Jyxo_Input_Factory.html">Jyxo_Input_Factory</a></li>
+			<li><a href="class-Jyxo_Input_Filter.html">Jyxo_Input_Filter</a></li>
+			<li><a href="class-Jyxo_Input_Filter_AbstractFilter.html">Jyxo_Input_Filter_AbstractFilter</a></li>
+			<li><a href="class-Jyxo_Input_Filter_ExplodeName.html">Jyxo_Input_Filter_ExplodeName</a></li>
+			<li><a href="class-Jyxo_Input_Filter_LowerCase.html">Jyxo_Input_Filter_LowerCase</a></li>
+			<li><a href="class-Jyxo_Input_Filter_Phone.html">Jyxo_Input_Filter_Phone</a></li>
+			<li><a href="class-Jyxo_Input_Filter_SanitizeUrl.html">Jyxo_Input_Filter_SanitizeUrl</a></li>
+			<li><a href="class-Jyxo_Input_Filter_ToInt.html">Jyxo_Input_Filter_ToInt</a></li>
+			<li><a href="class-Jyxo_Input_Filter_Trim.html">Jyxo_Input_Filter_Trim</a></li>
+			<li><a href="class-Jyxo_Input_Fluent.html">Jyxo_Input_Fluent</a></li>
+			<li><a href="class-Jyxo_Input_Upload.html">Jyxo_Input_Upload</a></li>
+			<li><a href="class-Jyxo_Input_Validator.html">Jyxo_Input_Validator</a></li>
+			<li><a href="class-Jyxo_Input_Validator_AbstractValidator.html">Jyxo_Input_Validator_AbstractValidator</a></li>
+			<li><a href="class-Jyxo_Input_Validator_Callback.html">Jyxo_Input_Validator_Callback</a></li>
+			<li><a href="class-Jyxo_Input_Validator_Equals.html">Jyxo_Input_Validator_Equals</a></li>
+			<li><a href="class-Jyxo_Input_Validator_InArray.html">Jyxo_Input_Validator_InArray</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsArray.html">Jyxo_Input_Validator_IsArray</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsBankAccountNumber.html">Jyxo_Input_Validator_IsBankAccountNumber</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsBirthNumber.html">Jyxo_Input_Validator_IsBirthNumber</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsCompanyId.html">Jyxo_Input_Validator_IsCompanyId</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsCountryCode.html">Jyxo_Input_Validator_IsCountryCode</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsDate.html">Jyxo_Input_Validator_IsDate</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsDateTime.html">Jyxo_Input_Validator_IsDateTime</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsEmail.html">Jyxo_Input_Validator_IsEmail</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsIban.html">Jyxo_Input_Validator_IsIban</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsInt.html">Jyxo_Input_Validator_IsInt</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsIpV4.html">Jyxo_Input_Validator_IsIpV4</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsIpV6.html">Jyxo_Input_Validator_IsIpV6</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsNumeric.html">Jyxo_Input_Validator_IsNumeric</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsPhone.html">Jyxo_Input_Validator_IsPhone</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsTaxId.html">Jyxo_Input_Validator_IsTaxId</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsUrl.html">Jyxo_Input_Validator_IsUrl</a></li>
+			<li><a href="class-Jyxo_Input_Validator_IsZipCode.html">Jyxo_Input_Validator_IsZipCode</a></li>
+			<li><a href="class-Jyxo_Input_Validator_LessThan.html">Jyxo_Input_Validator_LessThan</a></li>
+			<li><a href="class-Jyxo_Input_Validator_NotEmpty.html">Jyxo_Input_Validator_NotEmpty</a></li>
+			<li><a href="class-Jyxo_Input_Validator_Regex.html">Jyxo_Input_Validator_Regex</a></li>
+			<li><a href="class-Jyxo_Input_Validator_StringLengthBetween.html">Jyxo_Input_Validator_StringLengthBetween</a></li>
+			<li><a href="class-Jyxo_Input_Validator_StringLengthGreaterThan.html">Jyxo_Input_Validator_StringLengthGreaterThan</a></li>
+			<li><a href="class-Jyxo_Input_Validator_StringLengthLessThan.html">Jyxo_Input_Validator_StringLengthLessThan</a></li>
+			<li><a href="class-Jyxo_Input_Validator_Upload.html">Jyxo_Input_Validator_Upload</a></li>
+			<li><a href="class-Jyxo_Mail_Email.html">Jyxo_Mail_Email</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Address.html">Jyxo_Mail_Email_Address</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Attachment.html">Jyxo_Mail_Email_Attachment</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Attachment_File.html">Jyxo_Mail_Email_Attachment_File</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Attachment_InlineFile.html">Jyxo_Mail_Email_Attachment_InlineFile</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Attachment_InlineString.html">Jyxo_Mail_Email_Attachment_InlineString</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Attachment_String.html">Jyxo_Mail_Email_Attachment_String</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Body.html">Jyxo_Mail_Email_Body</a></li>
+			<li><a href="class-Jyxo_Mail_Email_Header.html">Jyxo_Mail_Email_Header</a></li>
+			<li><a href="class-Jyxo_Mail_Encoding.html">Jyxo_Mail_Encoding</a></li>
+			<li><a href="class-Jyxo_Mail_Parser.html">Jyxo_Mail_Parser</a></li>
+			<li><a href="class-Jyxo_Mail_Sender.html">Jyxo_Mail_Sender</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_Result.html">Jyxo_Mail_Sender_Result</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_Smtp.html">Jyxo_Mail_Sender_Smtp</a></li>
+			<li><a href="class-Jyxo_Rpc_Client.html">Jyxo_Rpc_Client</a></li>
+			<li><a href="class-Jyxo_Rpc_Json_Client.html">Jyxo_Rpc_Json_Client</a></li>
+			<li><a href="class-Jyxo_Rpc_Json_Server.html">Jyxo_Rpc_Json_Server</a></li>
+			<li><a href="class-Jyxo_Rpc_Server.html">Jyxo_Rpc_Server</a></li>
+			<li><a href="class-Jyxo_Rpc_Xml_Client.html">Jyxo_Rpc_Xml_Client</a></li>
+			<li><a href="class-Jyxo_Rpc_Xml_Server.html">Jyxo_Rpc_Xml_Server</a></li>
+			<li><a href="class-Jyxo_Shell_Client.html">Jyxo_Shell_Client</a></li>
+			<li><a href="class-Jyxo_SpamFilter.html">Jyxo_SpamFilter</a></li>
+			<li><a href="class-Jyxo_Spl_ArrayUtil.html">Jyxo_Spl_ArrayUtil</a></li>
+			<li><a href="class-Jyxo_Spl_CountableLimitIterator.html">Jyxo_Spl_CountableLimitIterator</a></li>
+			<li><a href="class-Jyxo_Spl_FilterIterator.html">Jyxo_Spl_FilterIterator</a></li>
+			<li><a href="class-Jyxo_Spl_MapIterator.html">Jyxo_Spl_MapIterator</a></li>
+			<li><a href="class-Jyxo_Spl_Object.html">Jyxo_Spl_Object</a></li>
+			<li><a href="class-Jyxo_Spl_ObjectCache.html">Jyxo_Spl_ObjectCache</a></li>
+			<li><a href="class-Jyxo_String.html">Jyxo_String</a></li>
+			<li><a href="class-Jyxo_Svn_Client.html">Jyxo_Svn_Client</a></li>
+			<li><a href="class-Jyxo_Svn_Result.html">Jyxo_Svn_Result</a></li>
+			<li><a href="class-Jyxo_Time_Composer.html">Jyxo_Time_Composer</a></li>
+			<li><a href="class-Jyxo_Time_Time.html">Jyxo_Time_Time</a></li>
+			<li><a href="class-Jyxo_Time_Util.html">Jyxo_Time_Util</a></li>
+			<li><a href="class-Jyxo_Timer.html">Jyxo_Timer</a></li>
+			<li><a href="class-Jyxo_Webdav_Client.html">Jyxo_Webdav_Client</a></li>
+			<li><a href="class-Jyxo_XmlReader.html">Jyxo_XmlReader</a></li>
+			<li><a href="class-LimitIterator.html">LimitIterator</a></li>
+			<li><a href="class-XMLReader.html">XMLReader</a></li>
 		</ul>
 
 		<h3>Interfaces</h3>
 		<ul>
-			<li><a href="ArrayAccess.html">ArrayAccess</a></li>
-
-			<li><a href="Countable.html">Countable</a></li>
-
-			<li><a href="Iterator.html">Iterator</a></li>
-
-			<li><a href="IteratorAggregate.html">IteratorAggregate</a></li>
-
-			<li><a href="Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a></li>
-
-			<li><a href="Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a></li>
-
-			<li><a href="Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a></li>
-
-			<li><a href="Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a></li>
-
-			<li><a href="OuterIterator.html">OuterIterator</a></li>
-
-			<li><a href="SeekableIterator.html">SeekableIterator</a></li>
-
-			<li><a href="Serializable.html">Serializable</a></li>
-
-			<li><a href="Traversable.html">Traversable</a></li>
-
+			<li><a href="class-ArrayAccess.html">ArrayAccess</a></li>
+			<li><a href="class-Countable.html">Countable</a></li>
+			<li><a href="class-Iterator.html">Iterator</a></li>
+			<li><a href="class-IteratorAggregate.html">IteratorAggregate</a></li>
+			<li><a href="class-Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a></li>
+			<li><a href="class-Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a></li>
+			<li><a href="class-Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a></li>
+			<li><a href="class-Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a></li>
+			<li><a href="class-OuterIterator.html">OuterIterator</a></li>
+			<li><a href="class-SeekableIterator.html">SeekableIterator</a></li>
+			<li><a href="class-Serializable.html">Serializable</a></li>
+			<li><a href="class-Traversable.html">Traversable</a></li>
 		</ul>
 
 		<h3>Exceptions</h3>
 		<ul>
-			<li><a href="BadFunctionCallException.html">BadFunctionCallException</a></li>
-
-			<li><a href="BadMethodCallException.html">BadMethodCallException</a></li>
-
-			<li><a href="Exception.html">Exception</a></li>
-
-			<li><a href="InvalidArgumentException.html">InvalidArgumentException</a></li>
-
-			<li><a href="Jyxo_Exception.html">Jyxo_Exception</a></li>
-
-			<li><a href="Jyxo_Gettext_Parser_Exception.html">Jyxo_Gettext_Parser_Exception</a></li>
-
-			<li><a href="Jyxo_Input_Exception.html">Jyxo_Input_Exception</a></li>
-
-			<li><a href="Jyxo_Input_Filter_Exception.html">Jyxo_Input_Filter_Exception</a></li>
-
-			<li><a href="Jyxo_Input_Validator_Exception.html">Jyxo_Input_Validator_Exception</a></li>
-
-			<li><a href="Jyxo_Mail_Parser_DefaultPartIdNotExistException.html">Jyxo_Mail_Parser_DefaultPartIdNotExistException</a></li>
-
-			<li><a href="Jyxo_Mail_Parser_EmailNotExistException.html">Jyxo_Mail_Parser_EmailNotExistException</a></li>
-
-			<li><a href="Jyxo_Mail_Parser_Exception.html">Jyxo_Mail_Parser_Exception</a></li>
-
-			<li><a href="Jyxo_Mail_Parser_PartNotExistException.html">Jyxo_Mail_Parser_PartNotExistException</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_CreateException.html">Jyxo_Mail_Sender_CreateException</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_Exception.html">Jyxo_Mail_Sender_Exception</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_RecipientUnknownException.html">Jyxo_Mail_Sender_RecipientUnknownException</a></li>
-
-			<li><a href="Jyxo_Mail_Sender_SmtpException.html">Jyxo_Mail_Sender_SmtpException</a></li>
-
-			<li><a href="Jyxo_Rpc_Exception.html">Jyxo_Rpc_Exception</a></li>
-
-			<li><a href="Jyxo_Rpc_Json_Exception.html">Jyxo_Rpc_Json_Exception</a></li>
-
-			<li><a href="Jyxo_Rpc_Xml_Exception.html">Jyxo_Rpc_Xml_Exception</a></li>
-
-			<li><a href="Jyxo_Shell_Exception.html">Jyxo_Shell_Exception</a></li>
-
-			<li><a href="Jyxo_Svn_Exception.html">Jyxo_Svn_Exception</a></li>
-
-			<li><a href="Jyxo_Time_ComposerException.html">Jyxo_Time_ComposerException</a></li>
-
-			<li><a href="Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a></li>
-
-			<li><a href="Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a></li>
-
-			<li><a href="LogicException.html">LogicException</a></li>
-
-			<li><a href="ReflectionException.html">ReflectionException</a></li>
-
-			<li><a href="RuntimeException.html">RuntimeException</a></li>
-
-			<li><a href="UnexpectedValueException.html">UnexpectedValueException</a></li>
-
+			<li><a href="class-BadFunctionCallException.html">BadFunctionCallException</a></li>
+			<li><a href="class-BadMethodCallException.html">BadMethodCallException</a></li>
+			<li><a href="class-Exception.html">Exception</a></li>
+			<li><a href="class-InvalidArgumentException.html">InvalidArgumentException</a></li>
+			<li><a href="class-Jyxo_Exception.html">Jyxo_Exception</a></li>
+			<li><a href="class-Jyxo_Gettext_Parser_Exception.html">Jyxo_Gettext_Parser_Exception</a></li>
+			<li><a href="class-Jyxo_Input_Exception.html">Jyxo_Input_Exception</a></li>
+			<li><a href="class-Jyxo_Input_Filter_Exception.html">Jyxo_Input_Filter_Exception</a></li>
+			<li><a href="class-Jyxo_Input_Validator_Exception.html">Jyxo_Input_Validator_Exception</a></li>
+			<li><a href="class-Jyxo_Mail_Parser_DefaultPartIdNotExistException.html">Jyxo_Mail_Parser_DefaultPartIdNotExistException</a></li>
+			<li><a href="class-Jyxo_Mail_Parser_EmailNotExistException.html">Jyxo_Mail_Parser_EmailNotExistException</a></li>
+			<li><a href="class-Jyxo_Mail_Parser_Exception.html">Jyxo_Mail_Parser_Exception</a></li>
+			<li><a href="class-Jyxo_Mail_Parser_PartNotExistException.html">Jyxo_Mail_Parser_PartNotExistException</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_CreateException.html">Jyxo_Mail_Sender_CreateException</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_Exception.html">Jyxo_Mail_Sender_Exception</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_RecipientUnknownException.html">Jyxo_Mail_Sender_RecipientUnknownException</a></li>
+			<li><a href="class-Jyxo_Mail_Sender_SmtpException.html">Jyxo_Mail_Sender_SmtpException</a></li>
+			<li><a href="class-Jyxo_Rpc_Exception.html">Jyxo_Rpc_Exception</a></li>
+			<li><a href="class-Jyxo_Rpc_Json_Exception.html">Jyxo_Rpc_Json_Exception</a></li>
+			<li><a href="class-Jyxo_Rpc_Xml_Exception.html">Jyxo_Rpc_Xml_Exception</a></li>
+			<li><a href="class-Jyxo_Shell_Exception.html">Jyxo_Shell_Exception</a></li>
+			<li><a href="class-Jyxo_Svn_Exception.html">Jyxo_Svn_Exception</a></li>
+			<li><a href="class-Jyxo_Time_ComposerException.html">Jyxo_Time_ComposerException</a></li>
+			<li><a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a></li>
+			<li><a href="class-Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a></li>
+			<li><a href="class-LogicException.html">LogicException</a></li>
+			<li><a href="class-ReflectionException.html">ReflectionException</a></li>
+			<li><a href="class-RuntimeException.html">RuntimeException</a></li>
+			<li><a href="class-UnexpectedValueException.html">UnexpectedValueException</a></li>
 		</ul>
+
+
 	</div>
 </div>
 <div id="rightWrapper">
-	<div id="right">		<form action="http://www.google.com/cse" id="search" onsubmit="if(this.q.value.indexOf('more:')==-1)this.q.value+=' more:api'">
-
+	<div id="right">
+		<form action="http://www.google.com/cse" id="search" onsubmit="if(this.q.value.indexOf('more:')==-1)this.q.value+=' more:api'">
 			<input type="hidden" name="cx" value="004718174178290363576:f23xklsezl8" /><input type="hidden" name="ie" value="UTF-8" /><input type="text" name="q" class="text" /><input type="submit" value="Search" />
 		</form>
 
-<div id="navigation">
-	<ul>
-		<li><a href="index.html" title="Summary of all packages">Overview</a></li>
-		<li>Package</li>
-		<li>Namespace</li>
-		<li>Class</li>
-	</ul>
-	<ul>
-		<li class="active">Tree</li>		<li><a href="deprecated.html" title="List of deprecated elements">Deprecated</a></li>
-	</ul>
-</div>
+		<div id="navigation">
+			<ul>
+				<li>
+					<a href="index.html" title="Overview"><span>Overview</span></a>
+				</li>
+				<li>
+<span>Package</span>				</li>
+				<li>
+<span>Class</span>				</li>
+			</ul>
+			<ul>
+				<li class="active">
+<span>Tree</span>				</li>
+				<li>
+					<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+				</li>
+			</ul>
+		</div>
 
 <div id="content">
-	<h1>Jyxo PHP Library Tree</h1>
+	<h1>Tree</h1>
 
 		<h3>Classes</h3>
 <div class="classtree">
 	<ul>
 
-			<li><div class="notlast"><a href="ArrayIterator.html">ArrayIterator</a>
-			 implements 				<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>, 
-							<a href="ArrayAccess.html">ArrayAccess</a>, 
-							<a href="SeekableIterator.html">SeekableIterator</a>, 
-							<a href="Serializable.html">Serializable</a>, 
-							<a href="Countable.html">Countable</a>
+			<li><div class="notlast"><a href="class-ArrayIterator.html">ArrayIterator</a>
+			 implements 
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>, 
+			
+				<a href="class-ArrayAccess.html">ArrayAccess</a>, 
+			
+				<a href="class-SeekableIterator.html">SeekableIterator</a>, 
+			
+				<a href="class-Serializable.html">Serializable</a>, 
+			
+				<a href="class-Countable.html">Countable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="ArrayObject.html">ArrayObject</a>
-			 implements 				<a href="IteratorAggregate.html">IteratorAggregate</a>, 
-							<a href="Traversable.html">Traversable</a>, 
-							<a href="ArrayAccess.html">ArrayAccess</a>, 
-							<a href="Serializable.html">Serializable</a>, 
-							<a href="Countable.html">Countable</a>
+			<li><div class="notlast"><a href="class-ArrayObject.html">ArrayObject</a>
+			 implements 
+				<a href="class-IteratorAggregate.html">IteratorAggregate</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>, 
+			
+				<a href="class-ArrayAccess.html">ArrayAccess</a>, 
+			
+				<a href="class-Serializable.html">Serializable</a>, 
+			
+				<a href="class-Countable.html">Countable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Closure.html">Closure</a>
+			<li><div class="notlast"><a href="class-Closure.html">Closure</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="DateTime.html">DateTime</a>
+			<li><div class="notlast"><a href="class-DateTime.html">DateTime</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="DateTimeZone.html">DateTimeZone</a>
+			<li><div class="notlast"><a href="class-DateTimeZone.html">DateTimeZone</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="HttpMessage.html">HttpMessage</a>
-			 implements 				<a href="Countable.html">Countable</a>, 
-							<a href="Serializable.html">Serializable</a>, 
-							<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-HttpMessage.html">HttpMessage</a>
+			 implements 
+				<a href="class-Countable.html">Countable</a>, 
+			
+				<a href="class-Serializable.html">Serializable</a>, 
+			
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="HttpRequest.html">HttpRequest</a>
+			<li><div class="notlast"><a href="class-HttpRequest.html">HttpRequest</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="HttpRequestPool.html">HttpRequestPool</a>
-			 implements 				<a href="Countable.html">Countable</a>, 
-							<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-HttpRequestPool.html">HttpRequestPool</a>
+			 implements 
+				<a href="class-Countable.html">Countable</a>, 
+			
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="IteratorIterator.html">IteratorIterator</a>
-			 implements 				<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>, 
-							<a href="OuterIterator.html">OuterIterator</a>
+			<li><div class="notlast"><a href="class-IteratorIterator.html">IteratorIterator</a>
+			 implements 
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>, 
+			
+				<a href="class-OuterIterator.html">OuterIterator</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="FilterIterator.html">FilterIterator</a>
+			<li><div class="notlast"><a href="class-FilterIterator.html">FilterIterator</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="Jyxo_Spl_FilterIterator.html">Jyxo_Spl_FilterIterator</a>
-			 implements 				<a href="Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Spl_FilterIterator.html">Jyxo_Spl_FilterIterator</a>
+			 implements 
+				<a href="class-Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
 			</div>
 
 				</ul></li>
 
-			<li class="last"><div class="last"><a href="LimitIterator.html">LimitIterator</a>
+			<li class="last"><div class="last"><a href="class-LimitIterator.html">LimitIterator</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="Jyxo_Spl_CountableLimitIterator.html">Jyxo_Spl_CountableLimitIterator</a>
-			 implements 				<a href="Countable.html">Countable</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Spl_CountableLimitIterator.html">Jyxo_Spl_CountableLimitIterator</a>
+			 implements 
+				<a href="class-Countable.html">Countable</a>
 			</div>
 
 				</ul></li></ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_Executor.html">Jyxo_Beholder_Executor</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_Executor.html">Jyxo_Beholder_Executor</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_Result.html">Jyxo_Beholder_Result</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_Result.html">Jyxo_Beholder_Result</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase.html">Jyxo_Beholder_TestCase</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase.html">Jyxo_Beholder_TestCase</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_FileSystem.html">Jyxo_Beholder_TestCase_FileSystem</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_FileSystem.html">Jyxo_Beholder_TestCase_FileSystem</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_HttpResponse.html">Jyxo_Beholder_TestCase_HttpResponse</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_HttpResponse.html">Jyxo_Beholder_TestCase_HttpResponse</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Imap.html">Jyxo_Beholder_TestCase_Imap</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Imap.html">Jyxo_Beholder_TestCase_Imap</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_JsonRpc.html">Jyxo_Beholder_TestCase_JsonRpc</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_JsonRpc.html">Jyxo_Beholder_TestCase_JsonRpc</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Memcached.html">Jyxo_Beholder_TestCase_Memcached</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Memcached.html">Jyxo_Beholder_TestCase_Memcached</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Mysql.html">Jyxo_Beholder_TestCase_Mysql</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Mysql.html">Jyxo_Beholder_TestCase_Mysql</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Pgsql.html">Jyxo_Beholder_TestCase_Pgsql</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Pgsql.html">Jyxo_Beholder_TestCase_Pgsql</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_PhpExtension.html">Jyxo_Beholder_TestCase_PhpExtension</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_PhpExtension.html">Jyxo_Beholder_TestCase_PhpExtension</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_PhpVersion.html">Jyxo_Beholder_TestCase_PhpVersion</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_PhpVersion.html">Jyxo_Beholder_TestCase_PhpVersion</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_PhpZend.html">Jyxo_Beholder_TestCase_PhpZend</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_PhpZend.html">Jyxo_Beholder_TestCase_PhpZend</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Smtp.html">Jyxo_Beholder_TestCase_Smtp</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Smtp.html">Jyxo_Beholder_TestCase_Smtp</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Beholder_TestCase_Webdav.html">Jyxo_Beholder_TestCase_Webdav</a>
+			<li><div class="notlast"><a href="class-Jyxo_Beholder_TestCase_Webdav.html">Jyxo_Beholder_TestCase_Webdav</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Beholder_TestCase_XmlRpc.html">Jyxo_Beholder_TestCase_XmlRpc</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Beholder_TestCase_XmlRpc.html">Jyxo_Beholder_TestCase_XmlRpc</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Charset.html">Jyxo_Charset</a>
+			<li><div class="notlast"><a href="class-Jyxo_Charset.html">Jyxo_Charset</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Color.html">Jyxo_Color</a>
+			<li><div class="notlast"><a href="class-Jyxo_Color.html">Jyxo_Color</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Css.html">Jyxo_Css</a>
+			<li><div class="notlast"><a href="class-Jyxo_Css.html">Jyxo_Css</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_ErrorHandler.html">Jyxo_ErrorHandler</a>
+			<li><div class="notlast"><a href="class-Jyxo_ErrorHandler.html">Jyxo_ErrorHandler</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_ErrorMail.html">Jyxo_ErrorMail</a>
+			<li><div class="notlast"><a href="class-Jyxo_ErrorMail.html">Jyxo_ErrorMail</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_FirePhp.html">Jyxo_FirePhp</a>
+			<li><div class="notlast"><a href="class-Jyxo_FirePhp.html">Jyxo_FirePhp</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Gettext_Parser.html">Jyxo_Gettext_Parser</a>
-			 implements 				<a href="Countable.html">Countable</a>, 
-							<a href="Iterator.html">Iterator</a>
+			<li><div class="notlast"><a href="class-Jyxo_Gettext_Parser.html">Jyxo_Gettext_Parser</a>
+			 implements 
+				<a href="class-Countable.html">Countable</a>, 
+			
+				<a href="class-Iterator.html">Iterator</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Gettext_Parser_Header.html">Jyxo_Gettext_Parser_Header</a>
+			<li><div class="notlast"><a href="class-Jyxo_Gettext_Parser_Header.html">Jyxo_Gettext_Parser_Header</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Gettext_Parser_Item.html">Jyxo_Gettext_Parser_Item</a>
+			<li><div class="notlast"><a href="class-Jyxo_Gettext_Parser_Item.html">Jyxo_Gettext_Parser_Item</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Html.html">Jyxo_Html</a>
+			<li><div class="notlast"><a href="class-Jyxo_Html.html">Jyxo_Html</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_HtmlTag.html">Jyxo_HtmlTag</a>
+			<li><div class="notlast"><a href="class-Jyxo_HtmlTag.html">Jyxo_HtmlTag</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Chain.html">Jyxo_Input_Chain</a>
-			 implements 				<a href="Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Chain.html">Jyxo_Input_Chain</a>
+			 implements 
+				<a href="class-Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="Jyxo_Input_Chain_Conditional.html">Jyxo_Input_Chain_Conditional</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Input_Chain_Conditional.html">Jyxo_Input_Chain_Conditional</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Factory.html">Jyxo_Input_Factory</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Factory.html">Jyxo_Input_Factory</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter.html">Jyxo_Input_Filter</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter.html">Jyxo_Input_Filter</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_AbstractFilter.html">Jyxo_Input_Filter_AbstractFilter</a>
-			 implements 				<a href="Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_AbstractFilter.html">Jyxo_Input_Filter_AbstractFilter</a>
+			 implements 
+				<a href="class-Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_ExplodeName.html">Jyxo_Input_Filter_ExplodeName</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_ExplodeName.html">Jyxo_Input_Filter_ExplodeName</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_LowerCase.html">Jyxo_Input_Filter_LowerCase</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_LowerCase.html">Jyxo_Input_Filter_LowerCase</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_Phone.html">Jyxo_Input_Filter_Phone</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_Phone.html">Jyxo_Input_Filter_Phone</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_SanitizeUrl.html">Jyxo_Input_Filter_SanitizeUrl</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_SanitizeUrl.html">Jyxo_Input_Filter_SanitizeUrl</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_ToInt.html">Jyxo_Input_Filter_ToInt</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_ToInt.html">Jyxo_Input_Filter_ToInt</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Input_Filter_Trim.html">Jyxo_Input_Filter_Trim</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Input_Filter_Trim.html">Jyxo_Input_Filter_Trim</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Fluent.html">Jyxo_Input_Fluent</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Fluent.html">Jyxo_Input_Fluent</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Upload.html">Jyxo_Input_Upload</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Upload.html">Jyxo_Input_Upload</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator.html">Jyxo_Input_Validator</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator.html">Jyxo_Input_Validator</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_AbstractValidator.html">Jyxo_Input_Validator_AbstractValidator</a>
-			 implements 				<a href="Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_AbstractValidator.html">Jyxo_Input_Validator_AbstractValidator</a>
+			 implements 
+				<a href="class-Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_Callback.html">Jyxo_Input_Validator_Callback</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_Callback.html">Jyxo_Input_Validator_Callback</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_Equals.html">Jyxo_Input_Validator_Equals</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_Equals.html">Jyxo_Input_Validator_Equals</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_InArray.html">Jyxo_Input_Validator_InArray</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_InArray.html">Jyxo_Input_Validator_InArray</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsArray.html">Jyxo_Input_Validator_IsArray</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsArray.html">Jyxo_Input_Validator_IsArray</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsBankAccountNumber.html">Jyxo_Input_Validator_IsBankAccountNumber</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsBankAccountNumber.html">Jyxo_Input_Validator_IsBankAccountNumber</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsBirthNumber.html">Jyxo_Input_Validator_IsBirthNumber</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsBirthNumber.html">Jyxo_Input_Validator_IsBirthNumber</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsCompanyId.html">Jyxo_Input_Validator_IsCompanyId</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsCompanyId.html">Jyxo_Input_Validator_IsCompanyId</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsCountryCode.html">Jyxo_Input_Validator_IsCountryCode</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsCountryCode.html">Jyxo_Input_Validator_IsCountryCode</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsDate.html">Jyxo_Input_Validator_IsDate</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsDate.html">Jyxo_Input_Validator_IsDate</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsDateTime.html">Jyxo_Input_Validator_IsDateTime</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsDateTime.html">Jyxo_Input_Validator_IsDateTime</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsEmail.html">Jyxo_Input_Validator_IsEmail</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsEmail.html">Jyxo_Input_Validator_IsEmail</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsIban.html">Jyxo_Input_Validator_IsIban</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsIban.html">Jyxo_Input_Validator_IsIban</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsInt.html">Jyxo_Input_Validator_IsInt</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsInt.html">Jyxo_Input_Validator_IsInt</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsIpV4.html">Jyxo_Input_Validator_IsIpV4</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsIpV4.html">Jyxo_Input_Validator_IsIpV4</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsIpV6.html">Jyxo_Input_Validator_IsIpV6</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsIpV6.html">Jyxo_Input_Validator_IsIpV6</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsNumeric.html">Jyxo_Input_Validator_IsNumeric</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsNumeric.html">Jyxo_Input_Validator_IsNumeric</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsPhone.html">Jyxo_Input_Validator_IsPhone</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsPhone.html">Jyxo_Input_Validator_IsPhone</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsTaxId.html">Jyxo_Input_Validator_IsTaxId</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsTaxId.html">Jyxo_Input_Validator_IsTaxId</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsUrl.html">Jyxo_Input_Validator_IsUrl</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsUrl.html">Jyxo_Input_Validator_IsUrl</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_IsZipCode.html">Jyxo_Input_Validator_IsZipCode</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_IsZipCode.html">Jyxo_Input_Validator_IsZipCode</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_LessThan.html">Jyxo_Input_Validator_LessThan</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_LessThan.html">Jyxo_Input_Validator_LessThan</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_NotEmpty.html">Jyxo_Input_Validator_NotEmpty</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_NotEmpty.html">Jyxo_Input_Validator_NotEmpty</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_Regex.html">Jyxo_Input_Validator_Regex</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_Regex.html">Jyxo_Input_Validator_Regex</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_StringLengthBetween.html">Jyxo_Input_Validator_StringLengthBetween</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_StringLengthBetween.html">Jyxo_Input_Validator_StringLengthBetween</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_StringLengthGreaterThan.html">Jyxo_Input_Validator_StringLengthGreaterThan</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_StringLengthGreaterThan.html">Jyxo_Input_Validator_StringLengthGreaterThan</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_StringLengthLessThan.html">Jyxo_Input_Validator_StringLengthLessThan</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_StringLengthLessThan.html">Jyxo_Input_Validator_StringLengthLessThan</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Input_Validator_Upload.html">Jyxo_Input_Validator_Upload</a>
-			 implements 				<a href="Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a>, 
-							<a href="Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Input_Validator_Upload.html">Jyxo_Input_Validator_Upload</a>
+			 implements 
+				<a href="class-Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a>, 
+			
+				<a href="class-Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Encoding.html">Jyxo_Mail_Encoding</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Encoding.html">Jyxo_Mail_Encoding</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Parser.html">Jyxo_Mail_Parser</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Parser.html">Jyxo_Mail_Parser</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Sender.html">Jyxo_Mail_Sender</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Sender.html">Jyxo_Mail_Sender</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Sender_Smtp.html">Jyxo_Mail_Sender_Smtp</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Sender_Smtp.html">Jyxo_Mail_Sender_Smtp</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Client.html">Jyxo_Rpc_Client</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Client.html">Jyxo_Rpc_Client</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Json_Client.html">Jyxo_Rpc_Json_Client</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Json_Client.html">Jyxo_Rpc_Json_Client</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Rpc_Xml_Client.html">Jyxo_Rpc_Xml_Client</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Rpc_Xml_Client.html">Jyxo_Rpc_Xml_Client</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Server.html">Jyxo_Rpc_Server</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Server.html">Jyxo_Rpc_Server</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Json_Server.html">Jyxo_Rpc_Json_Server</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Json_Server.html">Jyxo_Rpc_Json_Server</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Rpc_Xml_Server.html">Jyxo_Rpc_Xml_Server</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Rpc_Xml_Server.html">Jyxo_Rpc_Xml_Server</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Shell_Client.html">Jyxo_Shell_Client</a>
+			<li><div class="notlast"><a href="class-Jyxo_Shell_Client.html">Jyxo_Shell_Client</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_SpamFilter.html">Jyxo_SpamFilter</a>
+			<li><div class="notlast"><a href="class-Jyxo_SpamFilter.html">Jyxo_SpamFilter</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Spl_ArrayUtil.html">Jyxo_Spl_ArrayUtil</a>
+			<li><div class="notlast"><a href="class-Jyxo_Spl_ArrayUtil.html">Jyxo_Spl_ArrayUtil</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Spl_MapIterator.html">Jyxo_Spl_MapIterator</a>
-			 implements 				<a href="SeekableIterator.html">SeekableIterator</a>, 
-							<a href="OuterIterator.html">OuterIterator</a>, 
-							<a href="Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>, 
-							<a href="Countable.html">Countable</a>
+			<li><div class="notlast"><a href="class-Jyxo_Spl_MapIterator.html">Jyxo_Spl_MapIterator</a>
+			 implements 
+				<a href="class-SeekableIterator.html">SeekableIterator</a>, 
+			
+				<a href="class-OuterIterator.html">OuterIterator</a>, 
+			
+				<a href="class-Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>, 
+			
+				<a href="class-Countable.html">Countable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Spl_Object.html">Jyxo_Spl_Object</a>
-			 implements 				<a href="Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
+			<li><div class="notlast"><a href="class-Jyxo_Spl_Object.html">Jyxo_Spl_Object</a>
+			 implements 
+				<a href="class-Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email.html">Jyxo_Mail_Email</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email.html">Jyxo_Mail_Email</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Address.html">Jyxo_Mail_Email_Address</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Address.html">Jyxo_Mail_Email_Address</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Attachment.html">Jyxo_Mail_Email_Attachment</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Attachment.html">Jyxo_Mail_Email_Attachment</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Attachment_File.html">Jyxo_Mail_Email_Attachment_File</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Attachment_File.html">Jyxo_Mail_Email_Attachment_File</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Attachment_InlineFile.html">Jyxo_Mail_Email_Attachment_InlineFile</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Attachment_InlineFile.html">Jyxo_Mail_Email_Attachment_InlineFile</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Attachment_InlineString.html">Jyxo_Mail_Email_Attachment_InlineString</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Attachment_InlineString.html">Jyxo_Mail_Email_Attachment_InlineString</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Mail_Email_Attachment_String.html">Jyxo_Mail_Email_Attachment_String</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Mail_Email_Attachment_String.html">Jyxo_Mail_Email_Attachment_String</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Body.html">Jyxo_Mail_Email_Body</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Body.html">Jyxo_Mail_Email_Body</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Email_Header.html">Jyxo_Mail_Email_Header</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Email_Header.html">Jyxo_Mail_Email_Header</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Mail_Sender_Result.html">Jyxo_Mail_Sender_Result</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Mail_Sender_Result.html">Jyxo_Mail_Sender_Result</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Spl_ObjectCache.html">Jyxo_Spl_ObjectCache</a>
-			 implements 				<a href="IteratorAggregate.html">IteratorAggregate</a>
+			<li><div class="notlast"><a href="class-Jyxo_Spl_ObjectCache.html">Jyxo_Spl_ObjectCache</a>
+			 implements 
+				<a href="class-IteratorAggregate.html">IteratorAggregate</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_String.html">Jyxo_String</a>
+			<li><div class="notlast"><a href="class-Jyxo_String.html">Jyxo_String</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Svn_Client.html">Jyxo_Svn_Client</a>
+			<li><div class="notlast"><a href="class-Jyxo_Svn_Client.html">Jyxo_Svn_Client</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Svn_Result.html">Jyxo_Svn_Result</a>
-			 implements 				<a href="SeekableIterator.html">SeekableIterator</a>, 
-							<a href="Countable.html">Countable</a>
+			<li><div class="notlast"><a href="class-Jyxo_Svn_Result.html">Jyxo_Svn_Result</a>
+			 implements 
+				<a href="class-SeekableIterator.html">SeekableIterator</a>, 
+			
+				<a href="class-Countable.html">Countable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Time_Composer.html">Jyxo_Time_Composer</a>
+			<li><div class="notlast"><a href="class-Jyxo_Time_Composer.html">Jyxo_Time_Composer</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Time_Time.html">Jyxo_Time_Time</a>
-			 implements 				<a href="Serializable.html">Serializable</a>
+			<li><div class="notlast"><a href="class-Jyxo_Time_Time.html">Jyxo_Time_Time</a>
+			 implements 
+				<a href="class-Serializable.html">Serializable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Time_Util.html">Jyxo_Time_Util</a>
+			<li><div class="notlast"><a href="class-Jyxo_Time_Util.html">Jyxo_Time_Util</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Timer.html">Jyxo_Timer</a>
+			<li><div class="notlast"><a href="class-Jyxo_Timer.html">Jyxo_Timer</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Webdav_Client.html">Jyxo_Webdav_Client</a>
+			<li><div class="notlast"><a href="class-Jyxo_Webdav_Client.html">Jyxo_Webdav_Client</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="XMLReader.html">XMLReader</a>
+			<li class="last"><div class="last"><a href="class-XMLReader.html">XMLReader</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="Jyxo_XmlReader.html">Jyxo_XmlReader</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_XmlReader.html">Jyxo_XmlReader</a>
 			</div>
 
 		</li>
@@ -1054,68 +985,74 @@
 <div class="classtree">
 	<ul>
 
-			<li><div class="notlast"><a href="ArrayAccess.html">ArrayAccess</a>
+			<li><div class="notlast"><a href="class-ArrayAccess.html">ArrayAccess</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Countable.html">Countable</a>
+			<li><div class="notlast"><a href="class-Countable.html">Countable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Iterator.html">Iterator</a>
-			 implements 				<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-Iterator.html">Iterator</a>
+			 implements 
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="IteratorAggregate.html">IteratorAggregate</a>
-			 implements 				<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-IteratorAggregate.html">IteratorAggregate</a>
+			 implements 
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_FilterInterface.html">Jyxo_Input_FilterInterface</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_ValidatorInterface.html">Jyxo_Input_ValidatorInterface</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Validator_ErrorMessage.html">Jyxo_Input_Validator_ErrorMessage</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
+			<li><div class="notlast"><a href="class-Jyxo_Spl_ArrayCopy.html">Jyxo_Spl_ArrayCopy</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="OuterIterator.html">OuterIterator</a>
-			 implements 				<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-OuterIterator.html">OuterIterator</a>
+			 implements 
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="SeekableIterator.html">SeekableIterator</a>
-			 implements 				<a href="Iterator.html">Iterator</a>, 
-							<a href="Traversable.html">Traversable</a>
+			<li><div class="notlast"><a href="class-SeekableIterator.html">SeekableIterator</a>
+			 implements 
+				<a href="class-Iterator.html">Iterator</a>, 
+			
+				<a href="class-Traversable.html">Traversable</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Serializable.html">Serializable</a>
+			<li><div class="notlast"><a href="class-Serializable.html">Serializable</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Traversable.html">Traversable</a>
+			<li class="last"><div class="last"><a href="class-Traversable.html">Traversable</a>
 			</div>
 
 		</li>
@@ -1126,147 +1063,147 @@
 <div class="classtree">
 	<ul>
 
-			<li class="last"><div class="last"><a href="Exception.html">Exception</a>
+			<li class="last"><div class="last"><a href="class-Exception.html">Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Exception.html">Jyxo_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Exception.html">Jyxo_Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Gettext_Parser_Exception.html">Jyxo_Gettext_Parser_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Gettext_Parser_Exception.html">Jyxo_Gettext_Parser_Exception</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Exception.html">Jyxo_Input_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Exception.html">Jyxo_Input_Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Input_Filter_Exception.html">Jyxo_Input_Filter_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Input_Filter_Exception.html">Jyxo_Input_Filter_Exception</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Input_Validator_Exception.html">Jyxo_Input_Validator_Exception</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Input_Validator_Exception.html">Jyxo_Input_Validator_Exception</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Parser_Exception.html">Jyxo_Mail_Parser_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Parser_Exception.html">Jyxo_Mail_Parser_Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Parser_DefaultPartIdNotExistException.html">Jyxo_Mail_Parser_DefaultPartIdNotExistException</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Parser_DefaultPartIdNotExistException.html">Jyxo_Mail_Parser_DefaultPartIdNotExistException</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Parser_EmailNotExistException.html">Jyxo_Mail_Parser_EmailNotExistException</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Parser_EmailNotExistException.html">Jyxo_Mail_Parser_EmailNotExistException</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Mail_Parser_PartNotExistException.html">Jyxo_Mail_Parser_PartNotExistException</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Mail_Parser_PartNotExistException.html">Jyxo_Mail_Parser_PartNotExistException</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Sender_Exception.html">Jyxo_Mail_Sender_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Sender_Exception.html">Jyxo_Mail_Sender_Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Sender_CreateException.html">Jyxo_Mail_Sender_CreateException</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Sender_CreateException.html">Jyxo_Mail_Sender_CreateException</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Mail_Sender_RecipientUnknownException.html">Jyxo_Mail_Sender_RecipientUnknownException</a>
+			<li><div class="notlast"><a href="class-Jyxo_Mail_Sender_RecipientUnknownException.html">Jyxo_Mail_Sender_RecipientUnknownException</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Mail_Sender_SmtpException.html">Jyxo_Mail_Sender_SmtpException</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Mail_Sender_SmtpException.html">Jyxo_Mail_Sender_SmtpException</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Exception.html">Jyxo_Rpc_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Exception.html">Jyxo_Rpc_Exception</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="Jyxo_Rpc_Json_Exception.html">Jyxo_Rpc_Json_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Rpc_Json_Exception.html">Jyxo_Rpc_Json_Exception</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Rpc_Xml_Exception.html">Jyxo_Rpc_Xml_Exception</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Rpc_Xml_Exception.html">Jyxo_Rpc_Xml_Exception</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="Jyxo_Shell_Exception.html">Jyxo_Shell_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Shell_Exception.html">Jyxo_Shell_Exception</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Svn_Exception.html">Jyxo_Svn_Exception</a>
+			<li><div class="notlast"><a href="class-Jyxo_Svn_Exception.html">Jyxo_Svn_Exception</a>
 			</div>
 
 				</li>
 
-			<li><div class="notlast"><a href="Jyxo_Time_ComposerException.html">Jyxo_Time_ComposerException</a>
+			<li><div class="notlast"><a href="class-Jyxo_Time_ComposerException.html">Jyxo_Time_ComposerException</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a>
+			<li class="last"><div class="last"><a href="class-Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a>
 			</div>
 
 				</ul></li></ul></li>
 
-			<li><div class="notlast"><a href="LogicException.html">LogicException</a>
+			<li><div class="notlast"><a href="class-LogicException.html">LogicException</a>
 			</div>
 
 				<ul>
 
-			<li><div class="notlast"><a href="BadFunctionCallException.html">BadFunctionCallException</a>
+			<li><div class="notlast"><a href="class-BadFunctionCallException.html">BadFunctionCallException</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="BadMethodCallException.html">BadMethodCallException</a>
+			<li class="last"><div class="last"><a href="class-BadMethodCallException.html">BadMethodCallException</a>
 			</div>
 
 				</ul></li>
 
-			<li class="last"><div class="last"><a href="InvalidArgumentException.html">InvalidArgumentException</a>
+			<li class="last"><div class="last"><a href="class-InvalidArgumentException.html">InvalidArgumentException</a>
 			</div>
 
 				</ul></li>
 
-			<li><div class="notlast"><a href="ReflectionException.html">ReflectionException</a>
+			<li><div class="notlast"><a href="class-ReflectionException.html">ReflectionException</a>
 			</div>
 
 				</li>
 
-			<li class="last"><div class="last"><a href="RuntimeException.html">RuntimeException</a>
+			<li class="last"><div class="last"><a href="class-RuntimeException.html">RuntimeException</a>
 			</div>
 
 				<ul>
 
-			<li class="last"><div class="last"><a href="UnexpectedValueException.html">UnexpectedValueException</a>
+			<li class="last"><div class="last"><a href="class-UnexpectedValueException.html">UnexpectedValueException</a>
 			</div>
 
 		</li>
@@ -1275,7 +1212,7 @@
 </div></div>
 
 		<div id="footer">
-			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville" class="gravatar"><img src="http://gravatar.com/avatar/b2acbf0c8af3bdb2a57176d954ff8ba1?s=12" alt="Andrewsville" /></a>&amp;<a href="http://github.com/kukulich" class="gravatar"><img src="http://gravatar.com/avatar/d106644a59a117503d480ec2edf48368?s=12" alt="Kukulich" /></a> <a href="http://github.com/Andrewsville/apigen">ApiGen</a>, a fork of the original <a href="http://github.com/nette/apigen">tool</a>.<br />
+			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville" class="gravatar"><img src="http://gravatar.com/avatar/b2acbf0c8af3bdb2a57176d954ff8ba1?s=12" alt="Andrewsville" /></a>&amp;<a href="http://github.com/kukulich" class="gravatar"><img src="http://gravatar.com/avatar/d106644a59a117503d480ec2edf48368?s=12" alt="Kukulich" /></a> <a href="http://github.com/Andrewsville/apigen">TR ApiGen</a>, a fork of the original <a href="http://github.com/nette/apigen">tool</a>.<br />
 			Generated using the <a href="https://github.com/Andrewsville/PHP-Token-Reflection" title="All your tokens are belong to us">TokenReflection</a> library.
 		</div>
 	</div>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="TR ApiGen 2.0 beta 3" />
+
+	<title>Class Jyxo_Webdav_Client | Jyxo PHP Library</title>
+
+	<script type="text/javascript" src="resources/combined.js?134547457"></script>
+	<script type="text/javascript" src="elementlist.js?4174917431"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3003541655" />
+	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Jyxo PHP Library" href="http://jyxo.github.com/php-no-namespace/opensearch.xml" />
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', "UA-23550486-1"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+<div id="main">
+<div id="leftWrapper">
+	<div id="left">
+		<a id="home" href="index.html"><span>Overview</span></a>
+
+		<h3>Packages</h3>
+		<ul>
+			<li><a href="package-Jyxo_Beholder.html">Jyxo_Beholder</a>
+					</li>
+			<li><a href="package-Jyxo_Charset.html">Jyxo_Charset</a>
+					</li>
+			<li><a href="package-Jyxo_Color.html">Jyxo_Color</a>
+					</li>
+			<li><a href="package-Jyxo_Css.html">Jyxo_Css</a>
+					</li>
+			<li><a href="package-Jyxo_ErrorHandling.html">Jyxo_ErrorHandling</a>
+					</li>
+			<li><a href="package-Jyxo_FirePhp.html">Jyxo_FirePhp</a>
+					</li>
+			<li><a href="package-Jyxo_Gettext.html">Jyxo_Gettext</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Gettext.Parser.html">Parser</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Html.html">Jyxo_Html</a>
+					</li>
+			<li><a href="package-Jyxo_Input.html">Jyxo_Input</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Input.Chain.html">Chain</a>
+					</li>
+			<li><a href="package-Jyxo_Input.Filter.html">Filter</a>
+					</li>
+			<li><a href="package-Jyxo_Input.Validator.html">Validator</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Mail.html">Jyxo_Mail</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Mail.Email.html">Email</a>
+					</li>
+			<li><a href="package-Jyxo_Mail.Parser.html">Parser</a>
+					</li>
+			<li><a href="package-Jyxo_Mail.Sender.html">Sender</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Rpc.html">Jyxo_Rpc</a>
+					<span></span>
+					<ul>
+			<li><a href="package-Jyxo_Rpc.Json.html">Json</a>
+					</li>
+			<li><a href="package-Jyxo_Rpc.Xml.html">Xml</a>
+					</li>
+						</ul></li>
+			<li><a href="package-Jyxo_Shell.html">Jyxo_Shell</a>
+					</li>
+			<li><a href="package-Jyxo_SpamFilter.html">Jyxo_SpamFilter</a>
+					</li>
+			<li><a href="package-Jyxo_Spl.html">Jyxo_Spl</a>
+					</li>
+			<li><a href="package-Jyxo_String.html">Jyxo_String</a>
+					</li>
+			<li><a href="package-Jyxo_Svn.html">Jyxo_Svn</a>
+					</li>
+			<li><a href="package-Jyxo_Time.html">Jyxo_Time</a>
+					</li>
+			<li><a href="package-Jyxo_Timer.html">Jyxo_Timer</a>
+					</li>
+			<li class="active"><a href="package-Jyxo_Webdav.html">Jyxo_Webdav</a>
+					</li>
+			<li><a href="package-Jyxo_XmlReader.html">Jyxo_XmlReader</a>
+					</li>
+			<li><a href="package-PHP.html">PHP</a>
+					</li>
+		</ul>
+
+
+		<hr />
+
+		<h3>Classes</h3>
+		<ul>
+			<li class="active"><a href="class-Jyxo_Webdav_Client.html">Jyxo_Webdav_Client</a></li>
+		</ul>
+
+
+		<h3>Exceptions</h3>
+		<ul>
+			<li><a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a></li>
+			<li><a href="class-Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a></li>
+		</ul>
+
+
+	</div>
+</div>
+<div id="rightWrapper">
+	<div id="right">
+		<form action="http://www.google.com/cse" id="search" onsubmit="if(this.q.value.indexOf('more:')==-1)this.q.value+=' more:api'">
+			<input type="hidden" name="cx" value="004718174178290363576:f23xklsezl8" /><input type="hidden" name="ie" value="UTF-8" /><input type="text" name="q" class="text" /><input type="submit" value="Search" />
+		</form>
+
+		<div id="navigation">
+			<ul>
+				<li>
+					<a href="index.html" title="Overview"><span>Overview</span></a>
+				</li>
+				<li>
+					<a href="package-Jyxo_Webdav.html" title="Summary of Jyxo_Webdav"><span>Package</span></a>
+				</li>
+				<li class="active">
+<span>Class</span>				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="tree.html" title="Tree view of classes, interfaces and exceptions"><span>Tree</span></a>
+				</li>
+				<li>
+					<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+				</li>
+			</ul>
+		</div>
+
+<div id="content">
+	<h1>Class Jyxo_Webdav_Client</h1>
+
+	<div class="description">
+	
+<p>Client for work with WebDav. Uses the http PHP extension.</p>
+
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+
+				<b>Category:</b>
+				Jyxo<br />
+				<b>Package:</b>
+				<a href="package-Jyxo_Webdav.html">Jyxo_Webdav</a><br />
+				<b>Copyright:</b>
+				Copyright © 2005–2011 Jyxo, s.r.o.<br />
+				<b>License:</b>
+				<a
+href="https://github.com/jyxo/php/blob/master/license.txt">https://github.com/jyxo/php/blob/master/license.txt</a><br />
+				<b>Author:</b>
+				Jaroslav Hanslík<br />
+		<b>Located at</b> <a href="source-Jyxo_Webdav_Client.html#14" title="Go to source code">Webdav/Client.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#___construct">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#49" title="Go to source code"><b>__construct</b></a>(
+				array
+								<var>$servers</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Constructor.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$servers</code></dt>
+					<dd>array</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setOption" id="_setOption">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_setOption">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#61" title="Go to source code"><b>setOption</b></a>(
+									string
+				<var>$name</var>, 
+									mixed
+				<var>$value</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Sets an option.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Sets an option.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$name</code></dt>
+					<dd>string<br /> Option name</dd>
+					<dt><code>$value</code></dt>
+					<dd>mixed<br /> Option value</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exists" id="_exists">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_exists">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#72" title="Go to source code"><b>exists</b></a>(
+									string
+				<var>$path</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Checks if a file exists.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Checks if a file exists.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> File path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_get">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#85" title="Go to source code"><b>get</b></a>(
+									string
+				<var>$path</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Returns file contents.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Returns file contents.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> File path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					string<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a><br />If the file does not exist<br />
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getProperty" id="_getProperty">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_getProperty">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#106" title="Go to source code"><b>getProperty</b></a>(
+									string
+				<var>$path</var>, 
+									string
+				<var>$property</var> = <span class="php-quote">''</span>
+		)</code>
+
+		<div class="short">
+			
+<p>Returns a file property.<br />
+If no particular property is set, all properties are returned.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Returns a file property.<br />
+If no particular property is set, all properties are returned.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> File path</dd>
+					<dt><code>$property</code></dt>
+					<dd>string<br /> Property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					mixed<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_FileNotExistException.html">Jyxo_Webdav_FileNotExistException</a><br />If the file does not exist<br />
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="put" id="_put">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_put">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#138" title="Go to source code"><b>put</b></a>(
+									string
+				<var>$path</var>, 
+									string
+				<var>$data</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Saves data to a remote file.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Saves data to a remote file.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> File path</dd>
+					<dt><code>$data</code></dt>
+					<dd>string<br /> Data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="putFile" id="_putFile">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_putFile">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#151" title="Go to source code"><b>putFile</b></a>(
+									string
+				<var>$path</var>, 
+									string
+				<var>$file</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Saves file contents to a remote file.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Saves file contents to a remote file.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> File path</dd>
+					<dt><code>$file</code></dt>
+					<dd>string<br /> Local file path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copy" id="_copy">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_copy">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#164" title="Go to source code"><b>copy</b></a>(
+									string
+				<var>$pathFrom</var>, 
+									string
+				<var>$pathTo</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Copies a file.<br />
+Does not work on Lighttpd.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Copies a file.<br />
+Does not work on Lighttpd.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$pathFrom</code></dt>
+					<dd>string<br /> Source file path</dd>
+					<dt><code>$pathTo</code></dt>
+					<dd>string<br /> Target file path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rename" id="_rename">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_rename">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#190" title="Go to source code"><b>rename</b></a>(
+									string
+				<var>$pathFrom</var>, 
+									string
+				<var>$pathTo</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Renames a file.<br />
+Does not work on Lighttpd.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Renames a file.<br />
+Does not work on Lighttpd.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$pathFrom</code></dt>
+					<dd>string<br /> Original file name</dd>
+					<dt><code>$pathTo</code></dt>
+					<dd>string<br /> New file name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unlink" id="_unlink">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_unlink">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#216" title="Go to source code"><b>unlink</b></a>(
+									string
+				<var>$path</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Deletes a file.<br />
+Contains a check preventing from deleting directories.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Deletes a file.<br />
+Contains a check preventing from deleting directories.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$path</code></dt>
+					<dd>string<br /> Directory path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDir" id="_isDir">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_isDir">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#241" title="Go to source code"><b>isDir</b></a>(
+									string
+				<var>$dir</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Checks if a directory exists.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Checks if a directory exists.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$dir</code></dt>
+					<dd>string<br /> Directory path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mkdir" id="_mkdir">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_mkdir">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#265" title="Go to source code"><b>mkdir</b></a>(
+									string
+				<var>$dir</var>, 
+									boolean
+				<var>$recursive</var> = <span class="php-keyword1">true</span>
+		)</code>
+
+		<div class="short">
+			
+<p>Creates a directory.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Creates a directory.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$dir</code></dt>
+					<dd>string<br /> Directory path</dd>
+					<dt><code>$recursive</code></dt>
+					<dd>boolean<br /> Create directories recursively?</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rmdir" id="_rmdir">
+		<td class="right" width="1%"><code class="nowrap">
+			
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td><div class="position">
+		<a class="anchor" href="#_rmdir">#</a>
+		<code class="nowrap">
+				<a href="source-Jyxo_Webdav_Client.html#307" title="Go to source code"><b>rmdir</b></a>(
+									string
+				<var>$dir</var>
+		)</code>
+
+		<div class="short">
+			
+<p>Deletes a directory.</p>
+
+		</div>
+
+		<div class="detailed">
+			
+<p>Deletes a directory.</p>
+
+
+
+
+				<h4>Parameters</h4>
+				<div class="smallList"><dl>
+					<dt><code>$dir</code></dt>
+					<dd>string<br /> Directory path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="smallList">
+					boolean<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="smallList">
+					<a href="class-Jyxo_Webdav_Exception.html">Jyxo_Webdav_Exception</a><br />On error<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+</div>
+
+		<div id="footer">
+			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville" class="gravatar"><img src="http://gravatar.com/avatar/b2acbf0c8af3bdb2a57176d954ff8ba1?s=12" alt="Andrewsville" /></a>&amp;<a href="http://github.com/kukulich" class="gravatar"><img src="http://gravatar.com/avatar/d106644a59a117503d480ec2edf48368?s=12" alt="Kukulich" /></a> <a href="http://github.com/Andrewsville/apigen">TR ApiGen</a>, a fork of the original <a href="http://github.com/nette/apigen">tool</a>.<br />
+			Generated using the <a href="https://github.com/Andrewsville/PHP-Token-Reflection" title="All your tokens are belong to us">TokenReflection</a> library.
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
