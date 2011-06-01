@@ -15,7 +15,7 @@
  * Class for generating (x)HTML source code.
  * Allows creating HTML tags and its attributes.
  *
- * example:
+ * Example:
  * <code>
  * $p = Jyxo_HtmlTag::create('p')->setClass('buttons');
  * </code>

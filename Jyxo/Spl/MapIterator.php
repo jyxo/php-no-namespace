@@ -156,7 +156,7 @@ class Jyxo_Spl_MapIterator implements Countable, Jyxo_Spl_ArrayCopy, OuterIterat
 	}
 
 	/**
-	 * Seeks to defined position. Does NOT throw OutOfBoundsException.
+	 * Seeks to defined position. Does NOT throw {@link OutOfBoundsException}.
 	 *
 	 * @param integer $position New position
 	 */

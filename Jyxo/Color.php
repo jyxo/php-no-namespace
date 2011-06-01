@@ -61,11 +61,11 @@ class Jyxo_Color
 	 * Constructor.
 	 *
 	 * Accepts the following definition formats:
-	 *  - Hexadecimal string (with or without the hashmark at the beginning)
-	 *  - Array with red, green and blue component luminance values (in this order)
-	 *  - Number,
-	 *  - Jyxo_Color,
-	 *  - null
+	 * * Hexadecimal string (with or without the hashmark at the beginning)
+	 * * Array with red, green and blue component luminance values (in this order)
+	 * * Number,
+	 * * {@link Jyxo_Color},
+	 * * null
 	 *
 	 * @param mixed $color Color definition
 	 */
