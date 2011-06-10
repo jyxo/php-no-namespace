@@ -14,11 +14,10 @@
 /**
  * Simple object cache so we don't have to create them or write caching over again.
  *
- * <?php
- * // Example code
+ * Example:
  * <code>
- * 	$key = 'User_Friends/' . $user->username();
- * 	return Jyxo_Spl_ObjectCache::get($key) ?: Jyxo_Spl_ObjectCache::set($key, new User_Friends($this->context, $user));
+ * $key = 'User_Friends/' . $user->username();
+ * return Jyxo_Spl_ObjectCache::get($key) ?: Jyxo_Spl_ObjectCache::set($key, new User_Friends($this->context, $user));
  * </code>
  *
  * @category Jyxo

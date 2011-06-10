@@ -18,13 +18,13 @@
  *
  * Tests are performed in random order but results are outputted in alphabetical order with the order they were performed.
  *
- * Usage example:
+ * Example:
  * <code>
- *   $beholder = new Jyxo_Beholder_Executor('Project', $_GET);
- *   $beholder->addTest('T1', new Project_Beholder_Test1('Test 1'));
- *   $beholder->addTest('T2', new Project_Beholder_Test2('Test 2'));
- *   $beholder->addTest('T3', new Project_Beholder_Test3Blah('Test 3 Blah'));
- *   $beholder->run();
+ * $beholder = new Jyxo_Beholder_Executor('Project', $_GET);
+ * $beholder->addTest('T1', new Project_Beholder_Test1('Test 1'));
+ * $beholder->addTest('T2', new Project_Beholder_Test2('Test 2'));
+ * $beholder->addTest('T3', new Project_Beholder_Test3Blah('Test 3 Blah'));
+ * $beholder->run();
  * </code>
  *
  * @category Jyxo
