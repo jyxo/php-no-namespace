@@ -97,9 +97,6 @@
 	<loc>http://jyxo.github.com/php-no-namespace/class-ArrayIterator.html</loc>
 </url>
 <url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-ArrayObject.html</loc>
-</url>
-<url>
 	<loc>http://jyxo.github.com/php-no-namespace/class-Closure.html</loc>
 </url>
 <url>
@@ -110,15 +107,6 @@
 </url>
 <url>
 	<loc>http://jyxo.github.com/php-no-namespace/class-FilterIterator.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-HttpMessage.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-HttpRequest.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-HttpRequestPool.html</loc>
 </url>
 <url>
 	<loc>http://jyxo.github.com/php-no-namespace/class-IteratorIterator.html</loc>
@@ -560,14 +548,5 @@
 </url>
 <url>
 	<loc>http://jyxo.github.com/php-no-namespace/class-LogicException.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-ReflectionException.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-RuntimeException.html</loc>
-</url>
-<url>
-	<loc>http://jyxo.github.com/php-no-namespace/class-UnexpectedValueException.html</loc>
 </url>
 </urlset>
