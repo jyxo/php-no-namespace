@@ -92,7 +92,6 @@ class Jyxo_Time_ComposerException extends Jyxo_Exception
 	 *
 	 * @param string $message Exception message
 	 * @param integer $code Exception code (type)
-	 * @access parent::__construct()
 	 */
 	public function __construct($message, $code)
 	{
