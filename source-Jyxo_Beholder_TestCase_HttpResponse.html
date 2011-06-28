@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="TR ApiGen 2.0 RC" />
+	<meta name="generator" content="ApiGen 2.0" />
 	<meta name="robots" content="noindex" />
 
 	<title>File Beholder/TestCase/HttpResponse.php | Jyxo PHP Library</title>
 
-	<script type="text/javascript" src="resources/combined.js?3309972472"></script>
+	<script type="text/javascript" src="resources/combined.js?4060439551"></script>
 	<script type="text/javascript" src="elementlist.js?3795061350"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1274782946" />
 	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />
@@ -217,7 +217,7 @@
 </span><a href="#49" id="49" class="l"> 49: </a><span class="php-comment">     * @param string $url Tested URL
 </span><a href="#50" id="50" class="l"> 50: </a><span class="php-comment">     * @param array $tests Custom tests
 </span><a href="#51" id="51" class="l"> 51: </a><span class="php-comment">     */</span>
-<a href="#52" id="52" class="l"> 52: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$description</span>, <span class="php-var">$url</span>, <span class="php-keyword1">array</span> <span class="php-var">$tests</span> = <span class="php-keyword1">array</span>())
+<a href="#52" id="52" class="l"> 52: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$description</span>, <span class="php-var">$url</span>, <span class="php-keyword2">array</span> <span class="php-var">$tests</span> = <span class="php-keyword2">array</span>())
 <a href="#53" id="53" class="l"> 53: </a>    {
 <a href="#54" id="54" class="l"> 54: </a>        parent::__construct(<span class="php-var">$description</span>);
 <a href="#55" id="55" class="l"> 55: </a>
@@ -232,13 +232,13 @@
 </span><a href="#64" id="64" class="l"> 64: </a><span class="php-comment">     */</span>
 <a href="#65" id="65" class="l"> 65: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> run()
 <a href="#66" id="66" class="l"> 66: </a>    {
-<a href="#67" id="67" class="l"> 67: </a>        <span class="php-comment">// The http extension is required
-</span><a href="#68" id="68" class="l"> 68: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'http'</span>)) {
+<a href="#67" id="67" class="l"> 67: </a>        <span class="php-comment">// The http extension is required</span>
+<a href="#68" id="68" class="l"> 68: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'http'</span>)) {
 <a href="#69" id="69" class="l"> 69: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::NOT_APPLICABLE, <span class="php-quote">'Extension http missing'</span>);
 <a href="#70" id="70" class="l"> 70: </a>        }
 <a href="#71" id="71" class="l"> 71: </a>
 <a href="#72" id="72" class="l"> 72: </a>        <span class="php-var">$http</span> = <span class="php-keyword1">new</span> HttpRequest(
-<a href="#73" id="73" class="l"> 73: </a>            <span class="php-var">$this</span>-&gt;url, HttpRequest::METH_GET, <span class="php-keyword1">array</span>(
+<a href="#73" id="73" class="l"> 73: </a>            <span class="php-var">$this</span>-&gt;url, HttpRequest::METH_GET, <span class="php-keyword2">array</span>(
 <a href="#74" id="74" class="l"> 74: </a>                <span class="php-quote">'connecttimeout'</span> =&gt; <span class="php-num">5</span>, <span class="php-quote">'timeout'</span> =&gt; <span class="php-num">10</span>, <span class="php-quote">'useragent'</span> =&gt; <span class="php-quote">'JyxoBeholder'</span>
 <a href="#75" id="75" class="l"> 75: </a>            )
 <a href="#76" id="76" class="l"> 76: </a>        );
@@ -256,8 +256,8 @@
 <a href="#88" id="88" class="l"> 88: </a>                }
 <a href="#89" id="89" class="l"> 89: </a>            }
 <a href="#90" id="90" class="l"> 90: </a>
-<a href="#91" id="91" class="l"> 91: </a>            <span class="php-comment">// OK
-</span><a href="#92" id="92" class="l"> 92: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::SUCCESS);
+<a href="#91" id="91" class="l"> 91: </a>            <span class="php-comment">// OK</span>
+<a href="#92" id="92" class="l"> 92: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::SUCCESS);
 <a href="#93" id="93" class="l"> 93: </a>
 <a href="#94" id="94" class="l"> 94: </a>        } <span class="php-keyword1">catch</span> (HttpException <span class="php-var">$e</span>) {
 <a href="#95" id="95" class="l"> 95: </a>            <span class="php-var">$inner</span> = <span class="php-var">$e</span>;
@@ -274,7 +274,7 @@
 <a href="#106" id="106" class="l">106: </a></code></pre>
 
 		<div id="footer">
-			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">TR ApiGen</a>.<br />
+			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">ApiGen</a>.<br />
 			Generated using the <a href="https://github.com/Andrewsville/PHP-Token-Reflection" title="All your tokens are belong to us">TokenReflection</a> library.
 		</div>
 	</div>

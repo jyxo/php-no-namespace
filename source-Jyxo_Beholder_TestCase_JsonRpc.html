@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="TR ApiGen 2.0 RC" />
+	<meta name="generator" content="ApiGen 2.0" />
 	<meta name="robots" content="noindex" />
 
 	<title>File Beholder/TestCase/JsonRpc.php | Jyxo PHP Library</title>
 
-	<script type="text/javascript" src="resources/combined.js?3309972472"></script>
+	<script type="text/javascript" src="resources/combined.js?4060439551"></script>
 	<script type="text/javascript" src="elementlist.js?3795061350"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1274782946" />
 	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />
@@ -210,7 +210,7 @@
 </span><a href="#42" id="42" class="l"> 42: </a><span class="php-comment">     *
 </span><a href="#43" id="43" class="l"> 43: </a><span class="php-comment">     * @var string
 </span><a href="#44" id="44" class="l"> 44: </a><span class="php-comment">     */</span>
-<a href="#45" id="45" class="l"> 45: </a>    <span class="php-keyword1">private</span> <span class="php-var">$params</span> = <span class="php-keyword1">array</span>();
+<a href="#45" id="45" class="l"> 45: </a>    <span class="php-keyword1">private</span> <span class="php-var">$params</span> = <span class="php-keyword2">array</span>();
 <a href="#46" id="46" class="l"> 46: </a>
 <a href="#47" id="47" class="l"> 47: </a>    <span class="php-comment">/**
 </span><a href="#48" id="48" class="l"> 48: </a><span class="php-comment">     * Timeout.
@@ -228,7 +228,7 @@
 </span><a href="#60" id="60" class="l"> 60: </a><span class="php-comment">     * @param array $params Method parameters
 </span><a href="#61" id="61" class="l"> 61: </a><span class="php-comment">     * @param integer $timeout Timeout
 </span><a href="#62" id="62" class="l"> 62: </a><span class="php-comment">     */</span>
-<a href="#63" id="63" class="l"> 63: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$description</span>, <span class="php-var">$url</span>, <span class="php-var">$method</span>, <span class="php-keyword1">array</span> <span class="php-var">$params</span>, <span class="php-var">$timeout</span> = <span class="php-num">2</span>)
+<a href="#63" id="63" class="l"> 63: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$description</span>, <span class="php-var">$url</span>, <span class="php-var">$method</span>, <span class="php-keyword2">array</span> <span class="php-var">$params</span>, <span class="php-var">$timeout</span> = <span class="php-num">2</span>)
 <a href="#64" id="64" class="l"> 64: </a>    {
 <a href="#65" id="65" class="l"> 65: </a>        parent::__construct(<span class="php-var">$description</span>);
 <a href="#66" id="66" class="l"> 66: </a>
@@ -245,41 +245,41 @@
 </span><a href="#77" id="77" class="l"> 77: </a><span class="php-comment">     */</span>
 <a href="#78" id="78" class="l"> 78: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> run()
 <a href="#79" id="79" class="l"> 79: </a>    {
-<a href="#80" id="80" class="l"> 80: </a>        <span class="php-comment">// The json extension is required
-</span><a href="#81" id="81" class="l"> 81: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'json'</span>)) {
+<a href="#80" id="80" class="l"> 80: </a>        <span class="php-comment">// The json extension is required</span>
+<a href="#81" id="81" class="l"> 81: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'json'</span>)) {
 <a href="#82" id="82" class="l"> 82: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::NOT_APPLICABLE, <span class="php-quote">'Extension json missing'</span>);
 <a href="#83" id="83" class="l"> 83: </a>        }
 <a href="#84" id="84" class="l"> 84: </a>
-<a href="#85" id="85" class="l"> 85: </a>        <span class="php-comment">// The curl extension is required
-</span><a href="#86" id="86" class="l"> 86: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'curl'</span>)) {
+<a href="#85" id="85" class="l"> 85: </a>        <span class="php-comment">// The curl extension is required</span>
+<a href="#86" id="86" class="l"> 86: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">extension_loaded</span>(<span class="php-quote">'curl'</span>)) {
 <a href="#87" id="87" class="l"> 87: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::NOT_APPLICABLE, <span class="php-quote">'Extension curl missing'</span>);
 <a href="#88" id="88" class="l"> 88: </a>        }
 <a href="#89" id="89" class="l"> 89: </a>
-<a href="#90" id="90" class="l"> 90: </a>        <span class="php-comment">// The Jyxo_Rpc_Json_Client class is required
-</span><a href="#91" id="91" class="l"> 91: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-quote">'Jyxo_Rpc_Json_Client'</span>)) {
+<a href="#90" id="90" class="l"> 90: </a>        <span class="php-comment">// The Jyxo_Rpc_Json_Client class is required</span>
+<a href="#91" id="91" class="l"> 91: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">class_exists</span>(<span class="php-quote">'Jyxo_Rpc_Json_Client'</span>)) {
 <a href="#92" id="92" class="l"> 92: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::NOT_APPLICABLE, <span class="php-quote">'Class Jyxo_Rpc_Json_Client missing'</span>);
 <a href="#93" id="93" class="l"> 93: </a>        }
 <a href="#94" id="94" class="l"> 94: </a>
-<a href="#95" id="95" class="l"> 95: </a>        <span class="php-comment">// Creates a client
-</span><a href="#96" id="96" class="l"> 96: </a>        <span class="php-var">$rpc</span> = <span class="php-keyword1">new</span> Jyxo_Rpc_Json_Client();
+<a href="#95" id="95" class="l"> 95: </a>        <span class="php-comment">// Creates a client</span>
+<a href="#96" id="96" class="l"> 96: </a>        <span class="php-var">$rpc</span> = <span class="php-keyword1">new</span> Jyxo_Rpc_Json_Client();
 <a href="#97" id="97" class="l"> 97: </a>        <span class="php-var">$rpc</span>-&gt;setUrl(<span class="php-var">$this</span>-&gt;url)
 <a href="#98" id="98" class="l"> 98: </a>            -&gt;setTimeout(<span class="php-var">$this</span>-&gt;timeout);
 <a href="#99" id="99" class="l"> 99: </a>
-<a href="#100" id="100" class="l">100: </a>        <span class="php-comment">// Sends the request
-</span><a href="#101" id="101" class="l">101: </a>        <span class="php-keyword1">try</span> {
+<a href="#100" id="100" class="l">100: </a>        <span class="php-comment">// Sends the request</span>
+<a href="#101" id="101" class="l">101: </a>        <span class="php-keyword1">try</span> {
 <a href="#102" id="102" class="l">102: </a>            <span class="php-var">$rpc</span>-&gt;send(<span class="php-var">$this</span>-&gt;method, <span class="php-var">$this</span>-&gt;params);
 <a href="#103" id="103" class="l">103: </a>        } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {
 <a href="#104" id="104" class="l">104: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::FAILURE, <span class="php-var">$this</span>-&gt;url);
 <a href="#105" id="105" class="l">105: </a>        }
 <a href="#106" id="106" class="l">106: </a>
-<a href="#107" id="107" class="l">107: </a>        <span class="php-comment">// OK
-</span><a href="#108" id="108" class="l">108: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::SUCCESS, <span class="php-var">$this</span>-&gt;url);
+<a href="#107" id="107" class="l">107: </a>        <span class="php-comment">// OK</span>
+<a href="#108" id="108" class="l">108: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> Jyxo_Beholder_Result(Jyxo_Beholder_Result::SUCCESS, <span class="php-var">$this</span>-&gt;url);
 <a href="#109" id="109" class="l">109: </a>    }
 <a href="#110" id="110" class="l">110: </a>}
 <a href="#111" id="111" class="l">111: </a></code></pre>
 
 		<div id="footer">
-			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">TR ApiGen</a>.<br />
+			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">ApiGen</a>.<br />
 			Generated using the <a href="https://github.com/Andrewsville/PHP-Token-Reflection" title="All your tokens are belong to us">TokenReflection</a> library.
 		</div>
 	</div>

@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="TR ApiGen 2.0 RC" />
+	<meta name="generator" content="ApiGen 2.0" />
 	<meta name="robots" content="noindex" />
 
 	<title>File Shell/Client.php | Jyxo PHP Library</title>
 
-	<script type="text/javascript" src="resources/combined.js?3309972472"></script>
+	<script type="text/javascript" src="resources/combined.js?4060439551"></script>
 	<script type="text/javascript" src="elementlist.js?3795061350"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1274782946" />
 	<link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon" />
@@ -199,7 +199,7 @@
 </span><a href="#42" id="42" class="l"> 42: </a><span class="php-comment">     *
 </span><a href="#43" id="43" class="l"> 43: </a><span class="php-comment">     * @var array
 </span><a href="#44" id="44" class="l"> 44: </a><span class="php-comment">     */</span>
-<a href="#45" id="45" class="l"> 45: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$env</span> = <span class="php-keyword1">array</span>();
+<a href="#45" id="45" class="l"> 45: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$env</span> = <span class="php-keyword2">array</span>();
 <a href="#46" id="46" class="l"> 46: </a>
 <a href="#47" id="47" class="l"> 47: </a>    <span class="php-comment">/**
 </span><a href="#48" id="48" class="l"> 48: </a><span class="php-comment">     * Stdout output.
@@ -221,7 +221,7 @@
 </span><a href="#64" id="64" class="l"> 64: </a><span class="php-comment">     * @param string $cwd Working directory
 </span><a href="#65" id="65" class="l"> 65: </a><span class="php-comment">     * @param array $env Array of environment properties
 </span><a href="#66" id="66" class="l"> 66: </a><span class="php-comment">     */</span>
-<a href="#67" id="67" class="l"> 67: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$cwd</span> = <span class="php-quote">''</span>, <span class="php-keyword1">array</span> <span class="php-var">$env</span> = <span class="php-keyword1">array</span>())
+<a href="#67" id="67" class="l"> 67: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-var">$cwd</span> = <span class="php-quote">''</span>, <span class="php-keyword2">array</span> <span class="php-var">$env</span> = <span class="php-keyword2">array</span>())
 <a href="#68" id="68" class="l"> 68: </a>    {
 <a href="#69" id="69" class="l"> 69: </a>        <span class="php-var">$this</span>-&gt;setCwd(<span class="php-var">$cwd</span>);
 <a href="#70" id="70" class="l"> 70: </a>        <span class="php-var">$this</span>-&gt;env = <span class="php-var">$_ENV</span>;
@@ -241,7 +241,7 @@
 <a href="#84" id="84" class="l"> 84: </a>
 <a href="#85" id="85" class="l"> 85: </a>        <span class="php-var">$data</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$output</span>);
 <a href="#86" id="86" class="l"> 86: </a>
-<a href="#87" id="87" class="l"> 87: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$data</span> as <span class="php-var">$value</span>) {
+<a href="#87" id="87" class="l"> 87: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$data</span> <span class="php-keyword1">as</span> <span class="php-var">$value</span>) {
 <a href="#88" id="88" class="l"> 88: </a>            <span class="php-var">$value</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'/ +/'</span>, <span class="php-quote">' '</span>, <span class="php-var">$value</span>);
 <a href="#89" id="89" class="l"> 89: </a>            <span class="php-var">$list</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">' '</span>, <span class="php-var">$value</span>);
 <a href="#90" id="90" class="l"> 90: </a>            <span class="php-var">$commands</span>[<span class="php-var">$list</span>[<span class="php-num">10</span>]][] = <span class="php-var">$list</span>[<span class="php-num">1</span>];
@@ -301,7 +301,7 @@
 </span><a href="#144" id="144" class="l">144: </a><span class="php-comment">     * @param array $env Array of properties
 </span><a href="#145" id="145" class="l">145: </a><span class="php-comment">     * @return Jyxo_Shell_Client
 </span><a href="#146" id="146" class="l">146: </a><span class="php-comment">     */</span>
-<a href="#147" id="147" class="l">147: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setEnv(<span class="php-keyword1">array</span> <span class="php-var">$env</span>)
+<a href="#147" id="147" class="l">147: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setEnv(<span class="php-keyword2">array</span> <span class="php-var">$env</span>)
 <a href="#148" id="148" class="l">148: </a>    {
 <a href="#149" id="149" class="l">149: </a>        <span class="php-var">$this</span>-&gt;env = <span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;env, <span class="php-var">$env</span>);
 <a href="#150" id="150" class="l">150: </a>
@@ -333,27 +333,27 @@
 </span><a href="#176" id="176" class="l">176: </a><span class="php-comment">     */</span>
 <a href="#177" id="177" class="l">177: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">exec</span>(<span class="php-var">$cmd</span>, &amp;<span class="php-var">$status</span> = <span class="php-keyword1">null</span>)
 <a href="#178" id="178" class="l">178: </a>    {
-<a href="#179" id="179" class="l">179: </a>        <span class="php-keyword1">static</span> <span class="php-var">$descriptorSpec</span> = <span class="php-keyword1">array</span>(
-<a href="#180" id="180" class="l">180: </a>            <span class="php-num">0</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'r'</span>),
-<a href="#181" id="181" class="l">181: </a>            <span class="php-num">1</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'w'</span>),
-<a href="#182" id="182" class="l">182: </a>            <span class="php-num">2</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'w'</span>)
+<a href="#179" id="179" class="l">179: </a>        <span class="php-keyword1">static</span> <span class="php-var">$descriptorSpec</span> = <span class="php-keyword2">array</span>(
+<a href="#180" id="180" class="l">180: </a>            <span class="php-num">0</span> =&gt; <span class="php-keyword2">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'r'</span>),
+<a href="#181" id="181" class="l">181: </a>            <span class="php-num">1</span> =&gt; <span class="php-keyword2">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'w'</span>),
+<a href="#182" id="182" class="l">182: </a>            <span class="php-num">2</span> =&gt; <span class="php-keyword2">array</span>(<span class="php-quote">'pipe'</span>, <span class="php-quote">'w'</span>)
 <a href="#183" id="183" class="l">183: </a>        );
 <a href="#184" id="184" class="l">184: </a>
 <a href="#185" id="185" class="l">185: </a>        <span class="php-var">$env</span> = <span class="php-var">$this</span>-&gt;env;
 <a href="#186" id="186" class="l">186: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">ini_get</span>(<span class="php-quote">'safe_mode'</span>)) {
-<a href="#187" id="187" class="l">187: </a>            <span class="php-comment">// If the safe_mode is set on, we have to check which properties we are allowed to set.
-</span><a href="#188" id="188" class="l">188: </a>
+<a href="#187" id="187" class="l">187: </a>            <span class="php-comment">// If the safe_mode is set on, we have to check which properties we are allowed to set.</span>
+<a href="#188" id="188" class="l">188: </a>
 <a href="#189" id="189" class="l">189: </a>            <span class="php-var">$allowedPrefixes</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-keyword2">ini_get</span>(<span class="php-quote">'safe_mode_allowed_env_vars'</span>));
 <a href="#190" id="190" class="l">190: </a>            <span class="php-var">$protectedVars</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-keyword2">ini_get</span>(<span class="php-quote">'safe_mode_protected_env_vars'</span>));
 <a href="#191" id="191" class="l">191: </a>
-<a href="#192" id="192" class="l">192: </a>            <span class="php-comment">// Throw away protected properties.
-</span><a href="#193" id="193" class="l">193: </a>            <span class="php-var">$env</span> = <span class="php-keyword2">array_diff_key</span>(<span class="php-var">$env</span>, <span class="php-keyword2">array_fill_keys</span>(<span class="php-var">$protectedVars</span>, <span class="php-keyword1">true</span>));
+<a href="#192" id="192" class="l">192: </a>            <span class="php-comment">// Throw away protected properties.</span>
+<a href="#193" id="193" class="l">193: </a>            <span class="php-var">$env</span> = <span class="php-keyword2">array_diff_key</span>(<span class="php-var">$env</span>, <span class="php-keyword2">array_fill_keys</span>(<span class="php-var">$protectedVars</span>, <span class="php-keyword1">true</span>));
 <a href="#194" id="194" class="l">194: </a>
-<a href="#195" id="195" class="l">195: </a>            <span class="php-comment">// Throw away properties that do not have the allowed prefix.
-</span><a href="#196" id="196" class="l">196: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$env</span> as <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>) {
-<a href="#197" id="197" class="l">197: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$allowedPrefixes</span> as <span class="php-var">$prefix</span>) {
-<a href="#198" id="198" class="l">198: </a>                    <span class="php-comment">// Empty prefix - allow all properties.
-</span><a href="#199" id="199" class="l">199: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$prefix</span> === <span class="php-quote">''</span>) {
+<a href="#195" id="195" class="l">195: </a>            <span class="php-comment">// Throw away properties that do not have the allowed prefix.</span>
+<a href="#196" id="196" class="l">196: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$env</span> <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>) {
+<a href="#197" id="197" class="l">197: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$allowedPrefixes</span> <span class="php-keyword1">as</span> <span class="php-var">$prefix</span>) {
+<a href="#198" id="198" class="l">198: </a>                    <span class="php-comment">// Empty prefix - allow all properties.</span>
+<a href="#199" id="199" class="l">199: </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$prefix</span> === <span class="php-quote">''</span>) {
 <a href="#200" id="200" class="l">200: </a>                        <span class="php-keyword1">break</span> <span class="php-num">2</span>;
 <a href="#201" id="201" class="l">201: </a>                    }
 <a href="#202" id="202" class="l">202: </a>
@@ -414,7 +414,7 @@
 <a href="#257" id="257" class="l">257: </a></code></pre>
 
 		<div id="footer">
-			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">TR ApiGen</a>.<br />
+			Jyxo PHP Library API documentation generated by <a href="http://github.com/Andrewsville/apigen">ApiGen</a>.<br />
 			Generated using the <a href="https://github.com/Andrewsville/PHP-Token-Reflection" title="All your tokens are belong to us">TokenReflection</a> library.
 		</div>
 	</div>
